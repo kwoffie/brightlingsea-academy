@@ -1,0 +1,96 @@
+{
+    "id": "/",
+    "name": "Brightlingsea Academy",
+    "short_name": "Brightlingsea",
+    "description": "Brightlingsea Academy - Excellence in Education since 1995. Grade checker, parent portal, and school management.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "display_override": [
+        "standalone",
+        "minimal-ui"
+    ],
+    "orientation": "portrait",
+    "lang": "en-GH",
+    "dir": "ltr",
+    "theme_color": "#0056A3",
+    "background_color": "#0D1B2A",
+    "icons": [
+        {
+            "src": "assets/images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/images/icon-maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "categories": [
+        "education"
+    ],
+    "shortcuts": [
+        {
+            "name": "Our Gallery",
+            "short_name": "Gallery",
+            "description": "Photos of school life, events and anniversaries",
+            "url": "./gallery.html",
+            "icons": [
+                {
+                    "src": "assets/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "About Our School",
+            "short_name": "About",
+            "description": "Our history, mission and staff",
+            "url": "./about.html",
+            "icons": [
+                {
+                    "src": "assets/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "News & Updates",
+            "short_name": "News",
+            "description": "Latest announcements from the school",
+            "url": "./news.html",
+            "icons": [
+                {
+                    "src": "assets/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Contact Us",
+            "short_name": "Contact",
+            "description": "Phone, WhatsApp, email and school hours",
+            "url": "./contact.html",
+            "icons": [
+                {
+                    "src": "assets/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    "prefer_related_applications": false
+}

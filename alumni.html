@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; media-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'none'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+    <title>Alumni Network - Brightlingsea Academy</title>
+    <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/alumni.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="manifest" href="manifest.json">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Brightlingsea Academy",
+        "description": "Private Junior High School in Kumasi, Ghana — Excellence in Education. Our mission is to provide quality education that combines academic excellence with character development.",
+        "url": "https://brightlingseaacademy.edu.gh",
+        "logo": "https://brightlingseaacademy.edu.gh/assets/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "AD-141-4268",
+            "addressLocality": "Kumasi",
+            "addressRegion": "Ashanti Region",
+            "addressCountry": "GH"
+        },
+        "telephone": "0245868467",
+        "email": "brightlingseaacademy@gmail.com",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 07:30-15:30",
+        "sameAs": [
+            "https://www.facebook.com/brightlingseaacademy",
+            "https://wa.me/2332485868467"
+        ]
+    }
+    </script>
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brightlingsea Academy">
+    <meta property="og:title" content="Alumni Network - Brightlingsea Academy">
+    <meta property="og:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta property="og:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alumni Network - Brightlingsea Academy">
+    <meta name="twitter:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta name="twitter:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <!-- Brightlingsea: PWA icons & performance hints -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icon-512.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- /Brightlingsea hints -->
+
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <!-- Theme guard: apply the saved colour scheme before first paint -->
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('bla_theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var dark = saved ? saved === 'dark' : prefersDark;
+            document.body.classList.toggle('dark-mode', dark);
+            document.documentElement.classList.toggle('dark-mode', dark);
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+    })();
+    </script>
+    <!-- Page transition guard (progressive enhancement: never hides content) -->
+    <script>
+    (function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}document.body.classList.add('page-enter');}catch(e){}})();
+    </script>
+    <header class="site-header" id="header">
+        <nav class="nav-container container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo"><img src="assets/images/logo.png" alt="Brightlingsea Academy crest" class="brand-logo-img"></div>
+                <div class="brand-text">
+                    <span class="brand-name">Brightlingsea Academy</span>
+                    <span class="brand-tagline">Excellence in Education</span>
+                </div>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                        <ul class="nav-menu" id="navMenu" aria-hidden="true">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-explore-group">
+                    <span class="nav-explore-heading">Explore</span>
+                    <div class="nav-explore-grid">
+                <a href="gallery.html" class="nav-link nav-explore-link">Gallery</a>
+                <a href="staff.html" class="nav-link nav-explore-link">Staff</a>
+                <a href="news.html" class="nav-link nav-explore-link">News</a>
+                <a href="activities.html" class="nav-link nav-explore-link">Activities</a>
+                <a href="anniversary.html" class="nav-link nav-explore-link">Anniversary</a>
+                <a href="facilities.html" class="nav-link nav-explore-link">Facilities</a>
+                <a href="campus.html" class="nav-link nav-explore-link">Campus</a>
+                <a href="building-project.html" class="nav-link nav-explore-link">Building Project</a>
+                </div>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <div id="announcementBanner" class="announcement-banner"></div>
+
+    <section class="page-hero" id="mainContent">
+        <div class="page-hero-content">
+            <div class="page-hero-breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Alumni</span></div>
+            <h1 class="page-hero-title">Our <span class="text-accent">Alumni Network</span></h1>
+            <p class="page-hero-subtitle">Celebrating the achievements of Brightlingsea Academy graduates around the world.</p>
+        </div>
+    </section>
+    <div class="banner-accent"></div>
+
+    <section class="alumni-content" style="padding:60px 0;">
+        <div class="container">
+            <!-- Stats Banner -->
+            <div class="alumni-stats-banner" style="background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);border-radius:var(--radius-lg);padding:32px;margin-bottom:40px;position:relative;overflow:hidden;">
+                <div style="position:absolute;top:0;right:0;width:200px;height:100%;background:linear-gradient(135deg,rgba(255,107,53,0.3),transparent);pointer-events:none;"></div>
+                <div style="position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+                    <div style="text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--yellow);margin-bottom:4px;">500+</div>
+                        <div style="color:rgba(255,255,255,0.8);font-size:0.9rem;">Alumni Worldwide</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--yellow);margin-bottom:4px;">30+</div>
+                        <div style="color:rgba(255,255,255,0.8);font-size:0.9rem;">Universities Attended</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--yellow);margin-bottom:4px;">15+</div>
+                        <div style="color:rgba(255,255,255,0.8);font-size:0.9rem;">Years of Alumni Network</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--yellow);margin-bottom:4px;">98%</div>
+                        <div style="color:rgba(255,255,255,0.8);font-size:0.9rem;">BECE Pass Rate (2024)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Spotlight -->
+            <div class="alumni-spotlight-section" style="margin-bottom:40px;">
+                <h2 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--text-dark);text-align:center;margin-bottom:32px;">
+                    <i class="fas fa-star" style="color:var(--yellow);margin-right:8px;"></i> Alumni Spotlight
+                </h2>
+                <div class="alumni-spotlights-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;">
+                    <!-- Alumni 1 -->
+                    <div class="alumni-card" style="background:var(--white);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--bg-lighter);border-left:4px solid var(--blue);transition:var(--transition);">
+                        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+                            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--orange) 0%,var(--yellow) 100%);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:var(--blue-dark);font-family:var(--font-heading);text-transform:uppercase;flex-shrink:0;">AK</div>
+                            <div>
+                                <h3 style="font-family:var(--font-heading);font-size:1.1rem;color:var(--text-dark);margin-bottom:2px;font-weight:700;">Akosua Mensah</h3>
+                                <div style="color:var(--text-light);font-size:0.85rem;">Class of 2024</div>
+                                <div style="color:var(--blue);font-size:0.9rem;font-weight:600;margin-top:4px;">Presbyterian Girls' Secondary School (PGSS)</div>
+                                <div style="color:var(--orange);font-size:0.8rem;margin-top:2px;">Science Class</div>
+                            </div>
+                        </div>
+                        <p style="font-family:var(--font-heading);font-size:1rem;color:var(--text-dark);font-style:italic;line-height:1.6;margin-bottom:12px;padding:12px 16px;background:var(--bg-light);border-radius:var(--radius-sm);border-left:3px solid var(--yellow);">
+                            "Brightlingsea Academy prepared me so well for the BECE. The teachers never gave up on me, especially in Mathematics and Science. I scored A1 in both subjects!"
+                        </p>
+                        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--orange);font-weight:600;">
+                            <i class="fas fa-star"></i>
+                            <span>Scored aggregate 8 (BECE 2024) — Top 2% nationally</span>
+                        </div>
+                        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bg-lighter);display:flex;gap:8px;justify-content:flex-end;">
+                            <a href="mailto:akosua.m@example.com" class="btn btn-sm btn-blue"><i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- Alumni 2 -->
+                    <div class="alumni-card" style="background:var(--white);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--bg-lighter);border-left:4px solid var(--orange);transition:var(--transition);">
+                        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+                            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:var(--white);font-family:var(--font-heading);text-transform:uppercase;flex-shrink:0;">KB</div>
+                            <div>
+                                <h3 style="font-family:var(--font-heading);font-size:1.1rem;color:var(--text-dark);margin-bottom:2px;font-weight:700;">Kwame Asante</h3>
+                                <div style="color:var(--text-light);font-size:0.85rem;">Class of 2023</div>
+                                <div style="color:var(--blue);font-size:0.9rem;font-weight:600;margin-top:4px;">Senior High School</div>
+                                <div style="color:var(--orange);font-size:0.8rem;margin-top:2px;">Arts Class</div>
+                            </div>
+                        </div>
+                        <p style="font-family:var(--font-heading);font-size:1rem;color:var(--text-dark);font-style:italic;line-height:1.6;margin-bottom:12px;padding:12px 16px;background:var(--bg-light);border-radius:var(--radius-sm);border-left:3px solid var(--yellow);">
+                            "The creative arts program at Brightlingsea trained me to be confident and express myself. At the National Arts competition, I represented our school and won the regional prize!"
+                        </p>
+                        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--orange);font-weight:600;">
+                            <i class="fas fa-star"></i>
+                            <span>Regional Best Artist Award 2023</span>
+                        </div>
+                        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bg-lighter);display:flex;gap:8px;justify-content:flex-end;">
+                            <a href="mailto:kwame.a@example.com" class="btn btn-sm btn-blue"><i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- Alumni 3 -->
+                    <div class="alumni-card" style="background:var(--white);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--bg-lighter);border-left:4px solid var(--green,#28a745);transition:var(--transition);">
+                        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+                            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--yellow) 0%,var(--yellow-dark,#E6C200) 100%);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:var(--blue-dark);font-family:var(--font-heading);text-transform:uppercase;flex-shrink:0;">SB</div>
+                            <div>
+                                <h3 style="font-family:var(--font-heading);font-size:1.1rem;color:var(--text-dark);margin-bottom:2px;font-weight:700;">Samuel Boateng</h3>
+                                <div style="color:var(--text-light);font-size:0.85rem;">Class of 2024</div>
+                                <div style="color:var(--blue);font-size:0.9rem;font-weight:600;margin-top:4px;">St. Augustine's College</div>
+                                <div style="color:var(--orange);font-size:0.8rem;margin-top:2px;">Science Class</div>
+                            </div>
+                        </div>
+                        <p style="font-family:var(--font-heading);font-size:1rem;color:var(--text-dark);font-style:italic;line-height:1.6;margin-bottom:12px;padding:12px 16px;background:var(--bg-light);border-radius:var(--radius-sm);border-left:3px solid var(--yellow);">
+                            "The ICT and coding club opened my eyes to technology. I learned Python, built my first website, and even won 2nd place in the National Schools Coding Challenge!"
+                        </p>
+                        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--orange);font-weight:600;">
+                            <i class="fas fa-star"></i>
+                            <span>2nd place, National Schools Coding Challenge 2024</span>
+                        </div>
+                        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bg-lighter);display:flex;gap:8px;justify-content:flex-end;">
+                            <a href="mailto:samuel.b@example.com" class="btn btn-sm btn-blue"><i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- Alumni 4 -->
+                    <div class="alumni-card" style="background:var(--white);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--bg-lighter);border-left:4px solid var(--purple,#6f42c1);transition:var(--transition);">
+                        <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+                            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--teal,#3498db) 0%,var(--blue) 100%);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:var(--white);font-family:var(--font-heading);text-transform:uppercase;flex-shrink:0;">AB</div>
+                            <div>
+                                <h3 style="font-family:var(--font-heading);font-size:1.1rem;color:var(--text-dark);margin-bottom:2px;font-weight:700;">Abena Owusu</h3>
+                                <div style="color:var(--text-light);font-size:0.85rem;">Class of 2024</div>
+                                <div style="color:var(--blue);font-size:0.9rem;font-weight:600;margin-top:4px;">Women's Army Senior High School</div>
+                                <div style="color:var(--orange);font-size:0.8rem;margin-top:2px;">Arts Class</div>
+                            </div>
+                        </div>
+                        <p style="font-family:var(--font-heading);font-size:1rem;color:var(--text-dark);font-style:italic;line-height:1.6;margin-bottom:12px;padding:12px 16px;background:var(--bg-light);border-radius:var(--radius-sm);border-left:3px solid var(--yellow);">
+                            "I joined the athletics team in JHS 1 and by JHS 3 I was captain. Our team won District Sports Championship twice under Mr. Badu's coaching!"
+                        </p>
+                        <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--orange);font-weight:600;">
+                            <i class="fas fa-star"></i>
+                            <span>Gold medal in 200m — District Sports Championship 2023 & 2024</span>
+                        </div>
+                        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bg-lighter);display:flex;gap:8px;justify-content:flex-end;">
+                            <a href="mailto:abena.o@example.com" class="btn btn-sm btn-blue"><i class="fas fa-envelope"></i> Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- "Where Are They Now?" Stats -->
+            <div class="where-they-are" style="margin-bottom:40px;">
+                <h2 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--text-dark);text-align:center;margin-bottom:32px;">
+                    <i class="fas fa-globe-americas" style="color:var(--blue);margin-right:8px;"></i> Where Are They Now?
+                </h2>
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;max-width:800px;margin:0 auto;">
+                    <div style="background:var(--bg-light);border-radius:var(--radius-md);padding:20px;text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--blue);margin-bottom:4px;">50+</div>
+                        <div style="color:var(--text-light);font-size:0.85rem;">Alumni in universities<br>across Ghana</div>
+                    </div>
+                    <div style="background:var(--bg-light);border-radius:var(--radius-md);padding:20px;text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--orange);margin-bottom:4px;">12</div>
+                        <div style="color:var(--text-light);font-size:0.85rem;">Alumni working<br>in top companies</div>
+                    </div>
+                    <div style="background:var(--bg-light);border-radius:var(--radius-md);padding:20px;text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--yellow-dark,#E6C200);margin-bottom:4px;">5</div>
+                        <div style="color:var(--text-light);font-size:0.85rem;">Alumni studying<br>abroad</div>
+                    </div>
+                    <div style="background:var(--bg-light);border-radius:var(--radius-md);padding:20px;text-align:center;">
+                        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--green,#28a745);margin-bottom:4px;">3</div>
+                        <div style="color:var(--text-light);font-size:0.85rem;">Alumni-owned<br>businesses</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Registration Form -->
+            <div class="alumni-register-section" style="margin-bottom:40px;background:var(--bg-light);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--bg-lighter);">
+                <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+                    <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--yellow));display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--blue-dark);flex-shrink:0;">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div>
+                        <h2 style="font-family:var(--font-heading);font-size:1.4rem;color:var(--text-dark);margin-bottom:4px;font-weight:700;">Join the Alumni Network</h2>
+                        <p style="color:var(--text-light);font-size:0.9rem;">Update your information and stay connected with Brightlingsea Academy.</p>
+                    </div>
+                </div>
+
+                <form id="alumniRegisterForm" class="alumni-form" style="display:grid;gap:16px;">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div class="form-group">
+                            <label class="form-label">Full Name <span style="color:var(--orange);">*</span></label>
+                            <input type="text" id="alumniName" class="form-input" placeholder="Your full name">
+                            <div class="form-error" id="alumniNameError" style="display:none;">Please enter your full name</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Graduation Year <span style="color:var(--orange);">*</span></label>
+                            <select id="alumniYear" class="form-input">
+                                <option value="">Select year...</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="older">Older than 2015</option>
+                            </select>
+                            <div class="form-error" id="alumniYearError" style="display:none;">Please select your graduation year</div>
+                        </div>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div class="form-group">
+                            <label class="form-label">Current School / University</label>
+                            <input type="text" id="alumniSchool" class="form-input" placeholder="Where are you studying?">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Field of Study / Career</label>
+                            <input type="text" id="alumniField" class="form-input" placeholder="What are you studying or doing?">
+                        </div>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div class="form-group">
+                            <label class="form-label">Email <span style="color:var(--orange);">*</span></label>
+                            <input type="email" id="alumniEmail" class="form-input" placeholder="your@email.com">
+                            <div class="form-error" id="alumniEmailError" style="display:none;">Please enter a valid email</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" id="alumniPhone" class="form-input" placeholder="+233 XX XXX XXXX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Update / Message</label>
+                        <textarea id="alumniMessage" class="form-input" rows="3" placeholder="Share your news, achievements, or any message..."></textarea>
+                    </div>
+
+                    <div style="display:flex;gap:12px;align-items:center;padding-top:8px;">
+                        <button type="submit" class="btn btn-orange" id="alumniSubmitBtn" style="flex:1;justify-content:center;">
+                            <i class="fas fa-save"></i> Update My Info
+                        </button>
+                        <span style="color:var(--text-light);font-size:0.85rem;">We'll keep your information confidential.</span>
+                    </div>
+                </form>
+
+                <div id="alumniSuccess" style="display:none;padding:16px;background:var(--blue-light);border-radius:var(--radius-sm);color:var(--blue);font-weight:600;text-align:center;margin-top:16px;">
+                    <i class="fas fa-check-circle"></i> Thank you! Your information has been updated. Welcome back to the Brightlingsea family!
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="text-align:center;padding:32px;background:var(--blue);border-radius:var(--radius-lg);color:var(--white);margin-bottom:40px;">
+                <h2 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:8px;">Stay Connected</h2>
+                <p style="color:rgba(255,255,255,0.8);font-size:1rem;max-width:500px;margin:0 auto 20px;line-height:1.6;">Whether you're in Ghana or abroad, we'd love to hear from you. Share your news, attend reunions, and help inspire the next generation.</p>
+                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                    <a href="mailto:brightlingseaacademy@gmail.com" class="btn btn-yellow" style="color:var(--blue-dark);border-color:var(--yellow);">
+                        <i class="fas fa-envelope"></i> Email Alumni Office
+                    </a>
+                    <a href="tel:0245868467" class="btn btn-outline-white" style="border-color:rgba(255,255,255,0.3);">
+                        <i class="fas fa-phone-alt"></i> Call 0245868467
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-bg">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <a href="index.html" class="footer-brand-link"><img src="assets/images/logo.png" alt="" class="footer-brand-img"><span class="footer-brand-name">Brightlingsea Academy</span></a>
+                        <p class="footer-brand-desc">Excellence in education. Shaping the future leaders of Ghana.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="activities.html">Activities</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="campus.html">Campus</a></li>
+                            <li><a href="building-project.html">Building Project</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Contact Info</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i><span>AD-141-4268</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:0245868467">0245868467</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/2332485868467" rel="noopener noreferrer">0245868467</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:brightlingseaacademy@gmail.com">brightlingseaacademy@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div></div>
+                <div class="footer-partners">
+                    <p class="footer-partners-label">In Partnership With</p>
+                    <div class="footer-partners-row">
+                        <img src="assets/images/partners/porridge-and-pens.png" alt="Porridge and Pens" class="footer-partner-logo" loading="lazy" width="320" height="147">
+                        <img src="assets/images/partners/childrensalon.png" alt="Childrensalon" class="footer-partner-logo" loading="lazy" width="320" height="141">
+                        <img src="assets/images/partners/pink-parrot.png" alt="Pink Parrot" class="footer-partner-logo" loading="lazy" width="320" height="79">
+                        <img src="assets/images/partners/rotary-international.png" alt="Rotary International" class="footer-partner-logo" loading="lazy" width="260" height="259">
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/announcements-data.js"></script>
+    <script src="assets/js/accessibility.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+    <script>
+        (function initAlumniForm() {
+            const form = document.getElementById('alumniRegisterForm');
+            const success = document.getElementById('alumniSuccess');
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('alumniName').value.trim();
+                const email = document.getElementById('alumniEmail').value.trim();
+                const year = document.getElementById('alumniYear').value;
+
+                let hasError = false;
+                if (!name) {
+                    document.getElementById('alumniNameError').style.display = 'block';
+                    hasError = true;
+                }
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    document.getElementById('alumniEmailError').style.display = 'block';
+                    hasError = true;
+                }
+                if (!year) {
+                    document.getElementById('alumniYearError').style.display = 'block';
+                    hasError = true;
+                }
+
+                if (hasError) return;
+
+                // Simulate submission
+                const btn = document.getElementById('alumniSubmitBtn');
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+
+                setTimeout(() => {
+                    success.style.display = 'block';
+                    btn.innerHTML = '<i class="fas fa-check"></i> Updated!';
+                    btn.style.background = 'var(--blue)';
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+                }, 1500);
+            });
+        })();
+    </script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/performance.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Brightlingsea Academy — robots.txt
+# https://brightlingseaacademy.edu.gh
+
+User-agent: *
+Allow: /
+
+# Never index the interactive results portal or user-private pages.
+# These require credentials and expose student data.
+Disallow: /grade-checker/dashboard.html
+Disallow: /grade-checker/portal.html
+Disallow: /grade-checker/register.html
+Disallow: /grade-checker/forgot-password.html
+Disallow: /grade-checker/admin.html
+Disallow: /grade-checker/admin-dashboard.html
+Disallow: /grade-checker/admin-data.js
+# Internal QA / tooling and SW-only fallbacks
+Disallow: /tools/
+Disallow: /404.html
+Disallow: /500.html
+Disallow: /offline.html
+
+# Query-string result lookups must never be indexed (student privacy).
+Disallow: /*?*index=
+Disallow: /*?*level=
+Disallow: /*?*student=
+
+# Let crawlers fetch the styles/scripts they need to render pages.
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Sitemap
+Sitemap: https://brightlingseaacademy.edu.gh/sitemap.xml

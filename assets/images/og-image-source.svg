@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Brightlingsea Academy / Open Graph social sharing card (1200 x 630)
+  Used by og:image / twitter:image meta tags.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="ogbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0068C4"/>
+      <stop offset="55%" stop-color="#0056A3"/>
+      <stop offset="100%" stop-color="#00305F"/>
+    </linearGradient>
+    <linearGradient id="ogcap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE44D"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#ogbg)"/>
+  <circle cx="1120" cy="60" r="300" fill="#FF6B35" opacity="0.14"/>
+  <circle cx="60" cy="600" r="220" fill="#FFD700" opacity="0.10"/>
+
+  <!-- Graduation cap mark -->
+  <g transform="translate(168 200) scale(0.62)">
+    <path d="M -132 -18 L 0 -74 L 132 -18 L 0 38 Z" fill="url(#ogcap)"/>
+    <path d="M -62 12 L -62 52 C -62 78 62 78 62 52 L 62 12 L 0 40 Z" fill="#FFD700" opacity="0.92"/>
+    <path d="M 118 -22 L 138 62" stroke="#FF6B35" stroke-width="11" stroke-linecap="round" fill="none"/>
+    <circle cx="139" cy="74" r="17" fill="#FF6B35"/>
+  </g>
+
+  <!-- Word mark -->
+  <text x="330" y="252" font-family="Helvetica, Arial, sans-serif" font-size="88"
+        font-weight="bold" fill="#FFFFFF">Brightlingsea Academy</text>
+  <text x="330" y="316" font-family="Helvetica, Arial, sans-serif" font-size="38"
+        fill="#FFD700" letter-spacing="1">Excellence in Education since 1995</text>
+
+  <!-- Accent rule -->
+  <rect x="330" y="352" width="150" height="7" rx="3" fill="#FF6B35"/>
+
+  <!-- Value proposition -->
+  <text x="330" y="424" font-family="Helvetica, Arial, sans-serif" font-size="34"
+        fill="rgba(255,255,255,0.92)">Private Junior High School &#183; Accra, Ghana</text>
+  <text x="330" y="478" font-family="Helvetica, Arial, sans-serif" font-size="30"
+        fill="rgba(255,255,255,0.72)">BECE Results Checker &#183; Parent Portal &#183; Admissions</text>
+
+  <!-- Footer strip -->
+  <rect x="0" y="566" width="1200" height="64" fill="rgba(0,0,0,0.22)"/>
+  <text x="330" y="608" font-family="Helvetica, Arial, sans-serif" font-size="28"
+        fill="rgba(255,255,255,0.85)">brightlingseaacademy.edu.gh</text>
+</svg>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; media-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'none'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+    <title>Activities - Brightlingsea Academy</title>
+    <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/images/pages/activities-header.jpg" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Brightlingsea Academy",
+        "description": "Private Junior High School in Kumasi, Ghana — Excellence in Education. Our mission is to provide quality education that combines academic excellence with character development.",
+        "url": "https://brightlingseaacademy.edu.gh",
+        "logo": "https://brightlingseaacademy.edu.gh/assets/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "AD-141-4268",
+            "addressLocality": "Kumasi",
+            "addressRegion": "Ashanti Region",
+            "addressCountry": "GH"
+        },
+        "telephone": "0245868467",
+        "email": "brightlingseaacademy@gmail.com",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 07:30-15:30",
+        "sameAs": [
+            "https://www.facebook.com/brightlingseaacademy",
+            "https://wa.me/2332485868467"
+        ]
+    }
+    </script>
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brightlingsea Academy">
+    <meta property="og:title" content="Activities - Brightlingsea Academy">
+    <meta property="og:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta property="og:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Activities - Brightlingsea Academy">
+    <meta name="twitter:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta name="twitter:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <!-- Brightlingsea: PWA icons & performance hints -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icon-512.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- /Brightlingsea hints -->
+
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <!-- Theme guard: apply the saved colour scheme before first paint -->
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('bla_theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var dark = saved ? saved === 'dark' : prefersDark;
+            document.body.classList.toggle('dark-mode', dark);
+            document.documentElement.classList.toggle('dark-mode', dark);
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+    })();
+    </script>
+    <!-- Page transition guard (progressive enhancement: never hides content) -->
+    <script>
+    (function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}document.body.classList.add('page-enter');}catch(e){}})();
+    </script>
+    <header class="site-header" id="header">
+        <nav class="nav-container container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo"><img src="assets/images/logo.png" alt="Brightlingsea Academy crest" class="brand-logo-img"></div>
+                <div class="brand-text">
+                    <span class="brand-name">Brightlingsea Academy</span>
+                    <span class="brand-tagline">Excellence in Education</span>
+                </div>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu" aria-hidden="true">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-explore-group">
+                    <span class="nav-explore-heading">Explore</span>
+                    <div class="nav-explore-grid">
+                <a href="gallery.html" class="nav-link nav-explore-link">Gallery</a>
+                <a href="staff.html" class="nav-link nav-explore-link">Staff</a>
+                <a href="news.html" class="nav-link nav-explore-link">News</a>
+                <a href="activities.html" class="nav-link nav-explore-link active">Activities</a>
+                <a href="anniversary.html" class="nav-link nav-explore-link">Anniversary</a>
+                <a href="facilities.html" class="nav-link nav-explore-link">Facilities</a>
+                <a href="campus.html" class="nav-link nav-explore-link">Campus</a>
+                <a href="building-project.html" class="nav-link nav-explore-link">Building Project</a>
+                </div>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <!-- Announcement Banner -->
+    <div id="announcementBanner" class="announcement-banner"></div>
+
+    <section class="page-hero page-hero-photo page-hero-ph-activities" id="mainContent">
+        <div class="page-hero-content">
+            <div class="page-hero-breadcrumb">
+                <a href="index.html">Home</a><i class="fas fa-chevron-right"></i>
+                <span>Activities</span>
+            </div>
+            <h1 class="page-hero-title">School <span class="text-accent">Activities</span></h1>
+            <p class="page-hero-subtitle">Sports, clubs, events, and everything that makes life at Brightlingsea Academy vibrant and fun.</p>
+        </div>
+    </section>
+    <div class="banner-accent"></div>
+
+    <section class="activities-content">
+        <div class="container">
+            <!-- Intro -->
+            <div class="admissions-intro reveal" style="margin-bottom:40px;position:relative;overflow:hidden;border-radius:var(--radius-lg);padding:56px 32px;background:linear-gradient(135deg, rgba(0,86,163,0.88) 0%, rgba(0,61,122,0.82) 60%, rgba(255,107,53,0.75) 100%), url('assets/images/gallery/sports/games-1.jpg') center/cover no-repeat;">
+                <i class="fas fa-concierge-bell" style="font-size:2.5rem;color:var(--white);margin-bottom:12px;position:relative;z-index:1;"></i>
+                <h2 style="font-family:var(--font-heading);font-size:1.4rem;color:var(--white);margin-bottom:8px;position:relative;z-index:1;">More Than Just Academics</h2>
+                <p style="color:rgba(255,255,255,0.92);position:relative;z-index:1;">
+                    At Brightlingsea Academy, we believe in developing the whole child. Our wide range of activities 
+                    — from sports and clubs to community service and annual events — helps students discover their 
+                    talents, build confidence, and develop leadership skills.
+                </p>
+            </div>
+
+            <!-- Activity Category Filter -->
+            <div style="margin-bottom:28px;" class="reveal">
+                <span class="section-tag">FILTER</span>
+                <div class="activity-categories">
+                    <button class="activity-filter-btn active" data-filter="all">All Activities</button>
+                    <button class="activity-filter-btn" data-filter="sports">Sports</button>
+                    <button class="activity-filter-btn" data-filter="clubs">Clubs & Societies</button>
+                    <button class="activity-filter-btn" data-filter="events">Annual Events</button>
+                    <button class="activity-filter-btn" data-filter="community">Community Service</button>
+                    <button class="activity-filter-btn" data-filter="achievements">Achievements</button>
+                </div>
+            </div>
+
+            <!-- Activities Grid -->
+            <div class="activity-grid" id="activityGrid">
+                <!-- SPORTS -->
+                <div class="activity-card" data-category="sports" style="display:block;">
+                    <div class="activity-card-image" style="padding:0;overflow:hidden;">
+                        <img src="assets/images/gallery/sports/games-1.jpg" alt="Athletics and track events" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;">
+                        <span class="activity-card-badge">Athletics</span>
+                    </div>
+                    <div class="activity-card-body">
+                        <span class="activity-card-category">Sports</span>
+                        <h3 class="activity-card-title">Athletics & Track Events</h3>
+                        <p class="activity-card-desc">Our athletes compete in the annual inter-school athletics competition, consistently winning medals in sprints, relays, and long-distance events.</p>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="sports" style="display:block;">
+                    <div class="activity-card-image" style="padding:0;overflow:hidden;">
+                        <img src="assets/images/gallery/sports/games-4.jpg" alt="Football team" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;">
+                        <span class="activity-card-badge" style="background:var(--orange);">Football</span>
+                    </div>
+                    <div class="activity-card-body">
+                        <span class="activity-card-category">Sports</span>
+                        <h3 class="activity-card-title">Football Team</h3>
+                        <p class="activity-card-desc">Our boys' and girls' football teams train twice a week and compete in regional tournaments. The team has won the district championship 3 years in a row.</p>
+                    </div>
+                </div>
+                <!-- ANNUAL EVENTS -->
+                <div class="activity-card" data-category="events" style="display:block;">
+                    <div class="activity-card-image" style="padding:0;overflow:hidden;">
+                        <img src="assets/images/gallery/sports/games.jpg" alt="Sports day" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;">
+                        <span class="activity-card-badge" style="background:var(--blue);">Whole School</span>
+                    </div>
+                    <div class="activity-card-body">
+                        <span class="activity-card-category">Annual Events</span>
+                        <h3 class="activity-card-title">Sports Day</h3>
+                        <p class="activity-card-desc">Our annual inter-house sports day is the highlight of the year. From sprints to sack races, every student participates. Parents are invited to cheer.</p>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="events" style="display:block;">
+                    <div class="activity-card-image" style="padding:0;overflow:hidden;">
+                        <img src="assets/images/gallery/events/career-day.jpg" alt="Cultural day celebration" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;">
+                        <span class="activity-card-badge" style="background:var(--blue);">Whole School</span>
+                    </div>
+                    <div class="activity-card-body">
+                        <span class="activity-card-category">Annual Events</span>
+                        <h3 class="activity-card-title">Cultural Day Celebration</h3>
+                        <p class="activity-card-desc">Students showcase the rich cultural diversity of Ghana through traditional dress, food, music, dance, and storytelling. A vibrant celebration of our heritage.</p>
+                    </div>
+                </div>
+                <div class="activity-card" data-category="community" style="display:block;">
+                    <div class="activity-card-image" style="padding:0;overflow:hidden;">
+                        <img src="assets/images/gallery/campus/agriculture.jpg" alt="School garden project" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;">
+                        <span class="activity-card-badge" style="background:var(--blue);">Volunteering</span>
+                    </div>
+                    <div class="activity-card-body">
+                        <span class="activity-card-category">Community Service</span>
+                        <h3 class="activity-card-title">School Garden Project</h3>
+                        <p class="activity-card-desc">Students learn about agriculture and sustainability by maintaining a school garden. Produce is used in the cafeteria and sometimes donated to a local orphanage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note -->
+            
+
+            <!-- Back to homepage -->
+            <div class="text-center reveal reveal-delay-2" style="margin-top:24px;">
+                <a href="index.html" class="btn btn-outline-blue btn-lg">
+                    <i class="fas fa-home"></i> Back to Homepage
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-bg">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <a href="index.html" class="footer-brand-link">
+                            <img src="assets/images/logo.png" alt="" class="footer-brand-img">
+                            <span class="footer-brand-name">Brightlingsea Academy</span>
+                        </a>
+                        <p class="footer-brand-desc">Excellence in education. Shaping the future leaders of Ghana.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="activities.html">Activities</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="campus.html">Campus</a></li>
+                            <li><a href="building-project.html">Building Project</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Contact Info</h4>
+                        <ul class="footer-contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i><span>AD-141-4268</span></li>
+                            <li><i class="fas fa-phone-alt"></i><a href="tel:0245868467">0245868467</a></li>
+                            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/2332485868467" rel="noopener noreferrer">0245868467</a></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:brightlingseaacademy@gmail.com">brightlingseaacademy@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p class="footer-copyright">&copy; <span id="currentYear"></span> Brightlingsea Academy. All Rights Reserved.</p>
+                        <p class="footer-design-credit">Designed with <i class="fas fa-heart text-orange"></i> for a brighter future</p>
+                    </div>
+                </div>
+            </div>
+                <div class="footer-partners">
+                    <p class="footer-partners-label">In Partnership With</p>
+                    <div class="footer-partners-row">
+                        <img src="assets/images/partners/porridge-and-pens.png" alt="Porridge and Pens" class="footer-partner-logo" loading="lazy" width="320" height="147">
+                        <img src="assets/images/partners/childrensalon.png" alt="Childrensalon" class="footer-partner-logo" loading="lazy" width="320" height="141">
+                        <img src="assets/images/partners/pink-parrot.png" alt="Pink Parrot" class="footer-partner-logo" loading="lazy" width="320" height="79">
+                        <img src="assets/images/partners/rotary-international.png" alt="Rotary International" class="footer-partner-logo" loading="lazy" width="260" height="259">
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const activityGrid = document.getElementById('activityGrid');
+            const filterBtns = document.querySelectorAll('.activity-filter-btn');
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+                    const items = activityGrid ? activityGrid.querySelectorAll('.activity-card') : [];
+                    items.forEach(function (item) {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.style.opacity = '0';
+                            setTimeout(function () {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/performance.js"></script>
+    <script src="assets/js/accessibility.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+    <!-- Brightlingsea: feature scripts -->
+    <script src="assets/js/announcements-data.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* ========== VIDEO GALLERY PAGE ========== */
+.video-gallery-content {
+    padding: 60px 0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.video-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--bg-lighter);
+    transition: var(--transition);
+}
+
+.video-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.video-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--bg-light);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,86,163,0.85);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition);
+}
+
+.video-play-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: var(--blue);
+}
+
+.video-card-footer {
+    padding: 12px 4px 16px;
+}
+
+.video-card-category {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--blue);
+    background: var(--blue-light);
+    margin-bottom: 6px;
+}
+
+.video-card-category.sports {
+    background: rgba(40,167,69,0.1);
+    color: #28a745;
+}
+
+.video-card-category.academics {
+    background: rgba(111,66,193,0.1);
+    color: #6f42c1;
+}
+
+.video-card-category.music-arts {
+    background: rgba(255,107,53,0.1);
+    color: var(--orange);
+}
+
+.video-card-category.student-life {
+    background: rgba(255,107,53,0.15);
+    color: #CC5529;
+}
+
+.video-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.video-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.video-card p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .video-card {
+    background: #1B263B;
+    border-color: rgba(255,255,255,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .video-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .video-card h3 {
+    color: #E2E8F0;
+}
+
+body.dark-mode .video-card p {
+    color: rgba(255,255,255,0.75);
+}
+
+body.dark-mode .video-play-overlay {
+    background: var(--blue);
+}
+
+body.dark-mode .video-thumbnail img {
+    filter: brightness(0.7);
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Brightlingsea Academy / PWA MASKABLE icon source
+  Maskable icons are cropped by the OS to various shapes (circle,
+  squircle, rounded square). The background must bleed to all four
+  edges and all meaningful content must sit inside the "safe zone":
+  the centre circle with a diameter of 80% of the canvas.
+  Here the artwork is scaled to 70% around the centre to stay safe.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0068C4"/>
+      <stop offset="55%" stop-color="#0056A3"/>
+      <stop offset="100%" stop-color="#003D7A"/>
+    </linearGradient>
+    <linearGradient id="capm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE44D"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed background (no rounded corners, no transparency) -->
+  <rect x="0" y="0" width="512" height="512" fill="url(#bgm)"/>
+
+  <!-- All artwork scaled into the safe zone -->
+  <g transform="translate(256 256) scale(0.70) translate(-256 -256)">
+
+    <!-- Orange accent glow -->
+    <circle cx="140" cy="140" r="170" fill="#FF6B35" opacity="0.16"/>
+
+    <!-- Graduation cap -->
+    <g transform="translate(256 214)">
+      <path d="M -132 -18 L 0 -74 L 132 -18 L 0 38 Z" fill="url(#capm)"/>
+      <path d="M -62 12 L -62 52 C -62 78 62 78 62 52 L 62 12 L 0 40 Z" fill="#FFD700" opacity="0.92"/>
+      <path d="M 118 -22 L 138 62" stroke="#FF6B35" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <circle cx="139" cy="74" r="17" fill="#FF6B35"/>
+    </g>
+
+    <!-- Word-mark letter -->
+    <text x="256" y="404" font-family="Helvetica, Arial, sans-serif" font-size="150"
+          font-weight="bold" fill="#FFFFFF" text-anchor="middle"
+          letter-spacing="2">B</text>
+  </g>
+</svg>

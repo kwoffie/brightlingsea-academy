@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Dev/checkpoint files (never deploy)
+_checkpoints/
+updates/
+tools/
+
+# Scripts / shortcuts (local only)
+*.bat
+*.sh
+*.desktop
+
+# Temp / debug files
+_harness_gallery.html
+_audit_tmp.html
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db

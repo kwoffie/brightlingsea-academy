@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570" height="712" viewBox="0 0 570 712" role="img" aria-label="Photograph of Jemma Collins to be added">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0056A3"/>
+    </linearGradient>
+  </defs>
+  <rect width="570" height="712" fill="url(#bg)"/>
+  <g fill="none" stroke="#E6F0FA" stroke-opacity="0.55" stroke-width="9" stroke-linecap="round">
+    <circle cx="285" cy="290" r="92"/>
+    <path d="M133 522a152 152 0 0 1 304 0"/>
+  </g>
+  <text x="285" y="632" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#E6F0FA">Jemma Collins</text>
+  <text x="285" y="668" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" letter-spacing="2" fill="#E6F0FA" fill-opacity="0.75">PHOTO TO FOLLOW</text>
+</svg>

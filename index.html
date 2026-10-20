@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; media-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'none'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+    <title>Brightlingsea Academy - Junior High School</title>
+    <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Brightlingsea Academy",
+        "description": "Private Junior High School in Kumasi, Ghana — Excellence in Education. Our mission is to provide quality education that combines academic excellence with character development.",
+        "url": "https://brightlingseaacademy.edu.gh",
+        "logo": "https://brightlingseaacademy.edu.gh/assets/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "AD-141-4268",
+            "addressLocality": "Kumasi",
+            "addressRegion": "Ashanti Region",
+            "addressCountry": "GH"
+        },
+        "telephone": "0245868467",
+        "email": "brightlingseaacademy@gmail.com",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 07:30-15:30",
+        "sameAs": [
+            "https://www.facebook.com/brightlingseaacademy",
+            "https://wa.me/2332485868467"
+        ]
+    }
+    </script>
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brightlingsea Academy">
+    <meta property="og:title" content="Brightlingsea Academy - Junior High School">
+    <meta property="og:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta property="og:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brightlingsea Academy - Junior High School">
+    <meta name="twitter:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta name="twitter:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <!-- Brightlingsea: PWA icons & performance hints -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icon-512.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- /Brightlingsea hints -->
+
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <!-- Theme guard: apply the saved colour scheme before first paint -->
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('bla_theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var dark = saved ? saved === 'dark' : prefersDark;
+            document.body.classList.toggle('dark-mode', dark);
+            document.documentElement.classList.toggle('dark-mode', dark);
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+    })();
+    </script>
+    <!-- Page transition guard (progressive enhancement: never hides content) -->
+    <script>
+    (function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}document.body.classList.add('page-enter');}catch(e){}})();
+    </script>
+    <header class="site-header" id="header">
+        <nav class="nav-container container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo"><img src="assets/images/logo.png" alt="Brightlingsea Academy crest" class="brand-logo-img"></div>
+                <div class="brand-text">
+                    <span class="brand-name">Brightlingsea Academy</span>
+                    <span class="brand-tagline">Excellence in Education</span>
+                </div>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu" aria-hidden="true">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-explore-group">
+                    <span class="nav-explore-heading">Explore</span>
+                    <div class="nav-explore-grid">
+                <a href="gallery.html" class="nav-link nav-explore-link">Gallery</a>
+                <a href="staff.html" class="nav-link nav-explore-link">Staff</a>
+                <a href="news.html" class="nav-link nav-explore-link">News</a>
+                <a href="activities.html" class="nav-link nav-explore-link">Activities</a>
+                <a href="anniversary.html" class="nav-link nav-explore-link">Anniversary</a>
+                <a href="facilities.html" class="nav-link nav-explore-link">Facilities</a>
+                <a href="campus.html" class="nav-link nav-explore-link">Campus</a>
+                <a href="building-project.html" class="nav-link nav-explore-link">Building Project</a>
+                </div>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <!-- Announcement Banner -->
+    <div id="announcementBanner" class="announcement-banner"></div>
+
+    <section class="hero" id="mainContent">
+        <div class="hero-bg"></div>
+        <div class="hero-photo-slot" aria-hidden="true">
+            <img src="assets/images/hero-class.jpg" alt="Happy pupils of Brightlingsea Academy in class giving thumbs up" loading="eager" onerror="this.remove()">
+        </div>
+        <!-- Hero background video slot: hidden until a real file is added at
+             assets/video/hero-background.webm. Remove style="display:none" to activate. -->
+        <video class="hero-bg-video media-protected" data-protected preload="metadata" muted loop playsinline aria-hidden="true" style="display:none">
+            <source src="assets/video/hero-background.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content hero-split">
+                <div class="hero-crest">
+                    <!-- Left-docked crest (~270px desktop): shares the row with
+                         the copy instead of stacking over it, so the logo no
+                         longer covers the photo faces or the headline. -->
+                    <img src="assets/images/logo.png" alt="Brightlingsea Academy Crest" width="230" height="263" loading="eager">
+                </div>
+                <div class="hero-copy">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Building Future Leaders
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="text-slider-title">Welcome to</span>
+                        <span class="school-name-highlight">Brightlingsea Academy</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Where discipline meets excellence.
+                        <br class="hide-mobile">
+                        <span class="text-accent">Nursery · KG · Primary · Junior High</span> | Established in Ghana
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="contact.html" class="btn btn-orange btn-lg">
+                            <i class="fas fa-graduation-cap"></i> Apply Now
+                        </a>
+                        <a href="gallery.html" class="btn btn-outline-white btn-lg">
+                            <i class="fas fa-images"></i> See Our School
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">BECE Pass Rate</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">400+</span>
+                            <span class="stat-label">Students Enrolled</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">Nursery</span>
+                            <span class="stat-label">to JHS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="#about-preview" class="scroll-link"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- ============ SECTION PICKER ============ -->
+    <!-- SLOT: picker-labels/links - swap when level pages/programmes are finalised -->
+    <section class="section-picker" aria-label="Explore our school levels">
+        <div class="container">
+            <div class="picker-row">
+                <a href="departments.html" class="picker-btn picker-blue">Primary</a>
+                <a href="about.html" class="picker-btn picker-blue-dark">Junior High</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HEADLINE + INTRO ============ -->
+    <!-- SLOT: headline / intro-1 / intro-2 - placeholder copy, replace when supplied -->
+    <section class="home-intro">
+        <div class="container">
+            <div class="tagline-band">
+                <div class="tagline-quote">
+                    <i class="fas fa-quote-left" style="color:var(--orange);font-size:2rem;opacity:0.6;"></i>
+                </div>
+                <h2 class="intro-headline">Big futures start with small, brave steps.</h2>
+                <div class="tagline-quote-end">
+                    <i class="fas fa-quote-right" style="color:var(--orange);font-size:2rem;opacity:0.6;"></i>
+                </div>
+            </div>
+            <p class="intro-copy">Brightlingsea Academy is a community day school in Kumasi where children from Nursery through Junior High learn, play and grow together. Our classes are small, our teachers know every child by name, and our gates are open to every family.</p>
+            <p class="intro-copy">We keep lessons practical, discipline kind and standards high — so pupils leave us confident, curious and ready for BECE and beyond.</p>
+        </div>
+    </section>
+
+    <!-- ============ WELCOME BLOCK ============ -->
+    <!-- SLOT: principal-photo / welcome-message / welcome-name / welcome-role -->
+    <section class="welcome-block">
+        <div class="container">
+            <div class="welcome-grid">
+                <div class="welcome-photo">
+                    <i class="fas fa-user-tie"></i>
+                    <img src="assets/images/principal.jpg" alt="Dr. Ben Antwi-Agyei Boateng, Proprietor and Headmaster of Brightlingsea Academy" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="welcome-text">
+                    <h2 class="section-heading">Welcome to Our School</h2>
+                    <p class="welcome-message">Dear parents and well-wishers, welcome to Brightlingsea Academy. Every morning our gates open to children who arrive curious and leave confident. From a child's first day in Nursery to their final BECE paper in Junior High, we walk the journey with your family — small classes, caring teachers and high expectations.</p>
+                    <p class="welcome-signature"><strong>Dr. Ben Antwi-Agyei Boateng</strong><span>Proprietor / Headmaster</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links-section">
+        <div class="container">
+            <div class="quick-links-grid quick-links-grid--center">
+                <a href="about.html" class="quick-link-card card-blue">
+                    <div class="quick-link-icon"><i class="fas fa-info-circle"></i></div>
+                    <div class="quick-link-content">
+                        <h3 class="quick-link-title">About Us</h3>
+                        <p class="quick-link-desc">Our story, mission & vision</p>
+                    </div>
+                    <div class="quick-link-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="contact.html" class="quick-link-card card-blue">
+                    <div class="quick-link-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="quick-link-content">
+                        <h3 class="quick-link-title">Contact Us</h3>
+                        <p class="quick-link-desc">Get in touch with the school</p>
+                    </div>
+                    <div class="quick-link-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-preview" id="about-preview">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">SCHOOL HISTORY</span>
+                <h2 class="section-title">A Legacy of <span class="text-accent">Excellence</span></h2>
+                <p class="section-subtitle">Shaping the minds of Ghana's future leaders</p>
+            </div>
+            <div class="about-preview-grid">
+                <div class="about-preview-image">
+                    <img src="assets/images/class-learning.jpg" alt="Pupils of Brightlingsea Academy learning in class" loading="lazy" width="600" height="400" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
+                    <div class="image-overlay-badge">
+                        <span class="badge-semi-transparent">In Our Classrooms</span>
+                    </div>
+                </div>
+                <div class="about-preview-content">
+                    <h3 class="preview-heading">Our Story</h3>
+                    <p class="preview-text">
+                        Brightlingsea Academy opened its doors on 9 October 2016 as a small child care centre
+                        serving just 20 children and five staff members. A decade later, the Academy is home to
+                        over 400 pupils and a dedicated team of qualified teachers, and is recognised for the
+                        quality of education it offers to the families of Asennua and the wider Kwabre East community.
+                    </p>
+                    <p class="preview-text">
+                        We believe that every child has unique potential. Our holistic approach combines rigorous 
+                        academics with extracurricular activities, character development, and moral instruction — 
+                        preparing students not just for BECE, but for life.
+                    </p>
+                    <div class="preview-features">
+                        <div class="preview-feature">
+                            <div class="feature-icon" style="background:var(--blue);"><i class="fas fa-check"></i></div>
+                            <span>Qualified & Experienced Teachers</span>
+                        </div>
+                        <div class="preview-feature">
+                            <div class="feature-icon" style="background:var(--orange-deep);"><i class="fas fa-check"></i></div>
+                            <span>Modern Style of Teaching</span>
+                        </div>
+                        <div class="preview-feature">
+                            <div class="feature-icon" style="background:var(--blue-dark);"><i class="fas fa-check"></i></div>
+                            <span>100% BECE Pass Rate</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-outline-blue">
+                        Read Full Story <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">WHY US</span>
+                <h2 class="section-title">What Makes Us <span class="text-accent">Different</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card why-accent-orange">
+                    <span class="why-card-num">01</span>
+                    <div class="why-card-icon"><i class="fas fa-award"></i></div>
+                    <h3 class="why-card-title">Academic Excellence</h3>
+                    <p class="why-card-text">Consistently top-performing school in BECE with 100% pass rate and multiple grade 1 distinctions each year.</p>
+                    <span class="why-card-tag">BECE · 100%</span>
+                </div>
+                <div class="why-card why-accent-blue">
+                    <span class="why-card-num">02</span>
+                    <div class="why-card-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="why-card-title">Character Building</h3>
+                    <p class="why-card-text">We instil discipline, integrity, and good morals. Our students are known for their respectful behaviour and leadership qualities.</p>
+                    <span class="why-card-tag why-tag-blue">Moral Character</span>
+                </div>
+                <div class="why-card why-accent-gold">
+                    <span class="why-card-num">03</span>
+                    <div class="why-card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="why-card-title">Modern Style of Teaching</h3>
+                    <p class="why-card-text">Practical, hands-on lessons that put the child at the centre of learning — with technology used to support teaching, not replace it.</p>
+                    <span class="why-card-tag why-tag-blue">Student-Centred</span>
+                </div>
+                <div class="why-card why-accent-blue-dark">
+                    <span class="why-card-num">04</span>
+                    <div class="why-card-icon"><i class="fas fa-heart"></i></div>
+                    <h3 class="why-card-title">Affordable Quality</h3>
+                    <p class="why-card-text">Premium education at affordable fees. We offer scholarships for outstanding students and support families in need.</p>
+                    <span class="why-card-tag">Scholarships</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="events-preview">
+        <div class="container">
+            <div class="events-preview-wrap">
+                <h2 class="section-heading">Upcoming Events</h2>
+
+                <!-- ===== FEATURED: 10th Anniversary + Graduation ===== -->
+                <article class="anniversary-feature" id="anniversary-feature">
+                    <div class="anniversary-feature-media">
+                        <img src="assets/images/gallery/posters/10th-anniversary.jpg"
+                             alt="Brightlingsea Academy 10th Anniversary and Graduation Ceremony poster"
+                             width="636" height="424" decoding="async">
+
+                        <!-- Countdown sits on top of the anniversary picture -->
+                        <div class="anniversary-countdown" id="anniversaryCountdown" data-countdown-target="2026-10-09T09:00:00+00:00" aria-live="polite">
+                            <div class="countdown-unit">
+                                <span class="countdown-num" data-countdown="days">--</span>
+                                <span class="countdown-label">Days</span>
+                            </div>
+                            <div class="countdown-unit">
+                                <span class="countdown-num" data-countdown="hours">--</span>
+                                <span class="countdown-label">Hours</span>
+                            </div>
+                            <div class="countdown-unit">
+                                <span class="countdown-num" data-countdown="minutes">--</span>
+                                <span class="countdown-label">Minutes</span>
+                            </div>
+                            <div class="countdown-unit">
+                                <span class="countdown-num" data-countdown="seconds">--</span>
+                                <span class="countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writings sit below the picture -->
+                    <div class="anniversary-feature-body">
+                        <span class="anniversary-feature-tag"><i class="fas fa-star"></i> Featured Event</span>
+                        <h3 class="anniversary-feature-title">10th Anniversary &amp; Graduation Ceremony</h3>
+                        <p class="anniversary-feature-theme">“Empowering Minds, Transforming Lives: Celebrating a Decade of Excellence through Quality Education”</p>
+                        <p class="anniversary-feature-desc">Brightlingsea Academy marks ten years since it first opened its gates on 9 October 2016. Join us as we celebrate a decade of growth — from a single classroom of twenty children to a full Nursery-to-JHS school — and send off our graduating class.</p>
+                        <p class="anniversary-feature-date">
+                            <i class="fas fa-calendar-day"></i> Friday, 9 October 2026
+                        </p>
+
+                        <div class="anniversary-feature-actions">
+                            <a href="anniversary.html" class="btn btn-orange">
+                                <i class="fas fa-calendar-check"></i> Anniversary Details
+                            </a>
+                            <a href="gallery.html" class="btn btn-outline-blue">
+                                <i class="fas fa-images"></i> Past Celebrations
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="events-grid">
+                    <article class="event-card event-anticipate">
+                        <div class="event-card-header header-blue">
+                            <span class="event-category">Notice</span>
+                        </div>
+                        <div class="event-content">
+                            <span class="event-date">Latest Program Concluded</span>
+                            <h3 class="event-title">Anticipate Our Next Program</h3>
+                            <p class="event-desc">The latest program has officially come to a close. Viewers should anticipate exciting new programs and events coming soon to Brightlingsea Academy — full details will be shared right here as soon as they're available.</p>
+                            <a href="news.html" class="event-read-more">See Latest News <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="events-view-all">
+                    <a href="activities.html" class="btn btn-outline-blue btn-sm">View All Activities <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- BECE Results Showcase -->
+            <div class="becs-showcase">
+                <div class="container">
+                    <div class="becs-showcase-card">
+                        <div class="becs-showcase-badge">
+                            <i class="fas fa-trophy"></i> 2024 BECE Results
+                        </div>
+                        <h2 class="becs-headline">
+                            <span>100%</span> Pass Rate Achieved!
+                        </h2>
+                        <p class="becs-subtitle">Our JHS 3 students excelled in the 2024 BECE with outstanding results across all subjects.</p>
+                        <div class="becs-stats-grid">
+                            <div class="becs-stat-card first">
+                                <div class="becs-stat-number">15</div>
+                                <div class="becs-stat-label">1st Division</div>
+                            </div>
+                            <div class="becs-stat-card second">
+                                <div class="becs-stat-number">20</div>
+                                <div class="becs-stat-label">2nd Division</div>
+                            </div>
+                            <div class="becs-stat-card third">
+                                <div class="becs-stat-number">18</div>
+                                <div class="becs-stat-label">3rd Division</div>
+                            </div>
+                        </div>
+                        <div class="becs-cta">
+                            <a href="about.html" class="btn btn-outline-blue btn-lg becs-cta-btn">
+                                <i class="fas fa-info-circle"></i> Our Academic Excellence
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="cta-section">
+        <div class="cta-bg"><div class="cta-bg-pattern"></div></div>
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2 class="cta-title">Ready to Join <span class="text-accent">Brightlingsea Academy</span>?</h2>
+                <p class="cta-text">Admissions for the next academic year are now open. Limited spaces available.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-orange btn-lg">
+                        <i class="fas fa-paper-plane"></i> Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+            <!-- Newsletter + PWA Section -->
+            <div class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-inner">
+                        <div class="newsletter-content">
+                            <div class="newsletter-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <h3 class="newsletter-title">Stay in the Loop</h3>
+                            <p class="newsletter-desc">Get school news, event updates, and term reminders delivered to your inbox. Over 500 parents already subscribed.</p>
+                        </div>
+                        <div class="newsletter-form">
+                            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email for newsletter">
+                            <button class="newsletter-btn" id="newsletterSubscribe">
+                                <i class="fas fa-paper-plane"></i> Subscribe
+                            </button>
+                        </div>
+                        <div class="newsletter-success" id="newsletterSuccess">
+                            <i class="fas fa-check-circle"></i> You're subscribed! Check your email to confirm.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PWA Install Section -->
+            <div class="pwa-footer-section">
+                <div class="container">
+                    <div class="pwa-footer-inner">
+                        <div class="pwa-install-info">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Install Brightlingsea Academy as a <strong>web app</strong> for quick access — works offline too!</span>
+                        </div>
+                        <button class="pwa-install-btn" id="pwaInstallBtn" disabled>
+                            <i class="fas fa-download"></i> Add to Home Screen
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer class="site-footer">
+        <div class="footer-bg">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <a href="index.html" class="footer-brand-link">
+                            <img src="assets/images/logo.png" alt="" class="footer-brand-img">
+                            <span class="footer-brand-name">Brightlingsea Academy</span>
+                        </a>
+                        <p class="footer-brand-desc">
+                            Excellence in education. Shaping the future leaders of Ghana.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="activities.html">Activities</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="campus.html">Campus</a></li>
+                            <li><a href="building-project.html">Building Project</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Contact Info</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i><span>AD-141-4268</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:0245868467">0245868467</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/2332485868467" rel="noopener noreferrer">0245868467</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:brightlingseaacademy@gmail.com">brightlingseaacademy@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p class="footer-copyright">&copy; <span id="currentYear"></span> Brightlingsea Academy. All Rights Reserved.</p>
+                        <p class="footer-design-credit">Designed with <i class="fas fa-heart text-orange"></i> for a brighter future</p>
+                    </div>
+                </div>
+            </div>
+                <div class="footer-partners">
+                    <p class="footer-partners-label">In Partnership With</p>
+                    <div class="footer-partners-row">
+                        <img src="assets/images/partners/porridge-and-pens.png" alt="Porridge and Pens" class="footer-partner-logo" loading="lazy" width="320" height="147">
+                        <img src="assets/images/partners/childrensalon.png" alt="Childrensalon" class="footer-partner-logo" loading="lazy" width="320" height="141">
+                        <img src="assets/images/partners/pink-parrot.png" alt="Pink Parrot" class="footer-partner-logo" loading="lazy" width="320" height="79">
+                        <img src="assets/images/partners/rotary-international.png" alt="Rotary International" class="footer-partner-logo" loading="lazy" width="260" height="259">
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/accessibility.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+
+    <script src="assets/js/performance.js"></script>
+    <!-- Brightlingsea: feature scripts -->
+    <script src="assets/js/announcements-data.js"></script>
+    <script src="assets/js/countdown.js"></script>
+
+</body>
+</html>

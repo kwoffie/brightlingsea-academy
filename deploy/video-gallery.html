@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; media-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'none'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+
+    <title>Video Gallery - Brightlingsea Academy</title>
+    <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/video-gallery.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="manifest" href="manifest.json">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Brightlingsea Academy",
+        "description": "Private Junior High School in Kumasi, Ghana — Excellence in Education. Our mission is to provide quality education that combines academic excellence with character development.",
+        "url": "https://brightlingseaacademy.edu.gh",
+        "logo": "https://brightlingseaacademy.edu.gh/assets/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "AD-141-4268",
+            "addressLocality": "Kumasi",
+            "addressRegion": "Ashanti Region",
+            "addressCountry": "GH"
+        },
+        "telephone": "0245868467",
+        "email": "brightlingseaacademy@gmail.com",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 07:30-15:30",
+        "sameAs": [
+            "https://www.facebook.com/brightlingseaacademy",
+            "https://wa.me/2332485868467"
+        ]
+    }
+    </script>
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brightlingsea Academy">
+    <meta property="og:title" content="Video Gallery - Brightlingsea Academy">
+    <meta property="og:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta property="og:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Video Gallery - Brightlingsea Academy">
+    <meta name="twitter:description" content="Brightlingsea Academy - Private Junior High School in Kumasi, Ghana.">
+    <meta name="twitter:image" content="https://brightlingseaacademy.edu.gh/assets/images/og-image.png">
+    <!-- Brightlingsea: PWA icons & performance hints -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/icon-512.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#0056A3">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- /Brightlingsea hints -->
+
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <!-- Theme guard: apply the saved colour scheme before first paint -->
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('bla_theme');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var dark = saved ? saved === 'dark' : prefersDark;
+            document.body.classList.toggle('dark-mode', dark);
+            document.documentElement.classList.toggle('dark-mode', dark);
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (e) {}
+    })();
+    </script>
+    <!-- Page transition guard (progressive enhancement: never hides content) -->
+    <script>
+    (function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}document.body.classList.add('page-enter');}catch(e){}})();
+    </script>
+    <header class="site-header" id="header">
+        <nav class="nav-container container">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo"><img src="assets/images/logo.png" alt="Brightlingsea Academy crest" class="brand-logo-img"></div>
+                <div class="brand-text">
+                    <span class="brand-name">Brightlingsea Academy</span>
+                    <span class="brand-tagline">Excellence in Education</span>
+                </div>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                        <ul class="nav-menu" id="navMenu" aria-hidden="true">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-explore-group">
+                    <span class="nav-explore-heading">Explore</span>
+                    <div class="nav-explore-grid">
+                <a href="gallery.html" class="nav-link nav-explore-link">Gallery</a>
+                <a href="staff.html" class="nav-link nav-explore-link">Staff</a>
+                <a href="news.html" class="nav-link nav-explore-link">News</a>
+                <a href="activities.html" class="nav-link nav-explore-link">Activities</a>
+                <a href="anniversary.html" class="nav-link nav-explore-link">Anniversary</a>
+                <a href="facilities.html" class="nav-link nav-explore-link">Facilities</a>
+                <a href="campus.html" class="nav-link nav-explore-link">Campus</a>
+                <a href="building-project.html" class="nav-link nav-explore-link">Building Project</a>
+                </div>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <div id="announcementBanner" class="announcement-banner"></div>
+
+    <section class="page-hero" id="mainContent">
+        <div class="page-hero-content">
+            <div class="page-hero-breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Video Gallery</span></div>
+            <h1 class="page-hero-title">Video <span class="text-accent">Gallery</span></h1>
+            <p class="page-hero-subtitle">Watch our school video and explore views of classrooms, labs, gardens, sports grounds and more.</p>
+        </div>
+    </section>
+    <div class="banner-accent"></div>
+
+    <section class="video-gallery-content" style="padding:60px 0;">
+        <div class="container">
+            <!-- Categories -->
+            <div class="video-categories reveal" style="margin-bottom:32px;">
+                <span class="section-tag">FILTER</span>
+                <div class="activity-categories" id="videoCategoryTabs">
+                    <button class="activity-filter-btn active" data-category="all">All Videos</button>
+                    <button class="activity-filter-btn" data-category="events">Events</button>
+                    <button class="activity-filter-btn" data-category="sports">Sports</button>
+                    <button class="activity-filter-btn" data-category="academics">Academics</button>
+                    <button class="activity-filter-btn" data-category="student-life">Student Life</button>
+                    <button class="activity-filter-btn" data-category="music-arts">Music & Arts</button>
+                    <button class="activity-filter-btn" data-category="feeding">Student Feeding</button>
+                    <button class="activity-filter-btn" data-category="school-views">School Views</button>
+                </div>
+            </div>
+
+            <!-- School Views Intro -->
+            <div id="schoolViewsIntro" style="text-align:center;margin-bottom:32px;display:none;" class="reveal">
+                <span class="section-tag">SCHOOL VIEWS</span>
+                <h2 style="font-family:var(--font-heading);font-size:1.4rem;color:var(--text-dark);margin-top:8px;">Take a Look Around</h2>
+                <p style="color:var(--text-gray);max-width:600px;margin:8px auto 0;font-size:0.95rem;">A glimpse of our classrooms, laboratories, gardens, sports grounds and the spaces where learning happens every day.</p>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid" id="videoGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="video-empty-state" id="videoEmptyState" style="display:none;text-align:center;padding:60px 20px;">
+                <i class="fas fa-video" style="font-size:3rem;color:var(--bg-lighter);margin-bottom:16px;"></i>
+                <h3 style="font-family:var(--font-heading);font-size:1.3rem;color:var(--text-dark);margin-bottom:8px;">No Videos Found</h3>
+                <p style="color:var(--text-gray);font-size:0.95rem;">Try a different category.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-bg">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <a href="index.html" class="footer-brand-link">
+                            <img src="assets/images/logo.png" alt="" class="footer-brand-img">
+                            <span class="footer-brand-name">Brightlingsea Academy</span>
+                        </a>
+                        <p class="footer-brand-desc">
+                            Excellence in education. Shaping the future leaders of Ghana.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="activities.html">Activities</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="campus.html">Campus</a></li>
+                            <li><a href="building-project.html">Building Project</a></li>
+                            </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Contact Info</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i><span>AD-141-4268</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:0245868467">0245868467</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/2332485868467" rel="noopener noreferrer">0245868467</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:brightlingseaacademy@gmail.com">brightlingseaacademy@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p class="footer-copyright">&copy; <span id="currentYear"></span> Brightlingsea Academy. All Rights Reserved.</p>
+                        <p class="footer-design-credit">Designed with <i class="fas fa-heart text-orange"></i> for a brighter future</p>
+                    </div>
+                </div>
+            </div>
+                <div class="footer-partners">
+                    <p class="footer-partners-label">In Partnership With</p>
+                    <div class="footer-partners-row">
+                        <img src="assets/images/partners/porridge-and-pens.png" alt="Porridge and Pens" class="footer-partner-logo" loading="lazy" width="320" height="147">
+                        <img src="assets/images/partners/childrensalon.png" alt="Childrensalon" class="footer-partner-logo" loading="lazy" width="320" height="141">
+                        <img src="assets/images/partners/pink-parrot.png" alt="Pink Parrot" class="footer-partner-logo" loading="lazy" width="320" height="79">
+                        <img src="assets/images/partners/rotary-international.png" alt="Rotary International" class="footer-partner-logo" loading="lazy" width="260" height="259">
+                    </div>
+                </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/announcements-data.js"></script>
+    <script src="assets/js/accessibility.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+    <script>
+        (function initVideoGallery() {
+            const grid = document.getElementById('videoGrid');
+            const categoryTabs = document.getElementById('videoCategoryTabs');
+            const emptyState = document.getElementById('videoEmptyState');
+            const schoolViewsIntro = document.getElementById('schoolViewsIntro');
+            let currentCategory = 'all';
+
+            const videos = [
+                {
+                    id: 'school-feeding',
+                    title: 'Student Feeding Programme',
+                    description: 'A look at our daily feeding programme — hot breakfast and lunch served to every child, prepared in our hygiene-certified kitchen.',
+                    category: 'feeding',
+                    date: '2025',
+                    duration: '2:14',
+                    thumbnail: 'assets/images/gallery/campus/kids-resting.jpg',
+                    videoSrc: 'assets/video/School-Feeding-Video.mp4',
+                    embed: ''
+                },
+                {
+                    id: 'view-classroom',
+                    title: 'Spacious Classrooms',
+                    description: 'Well-lit, airy classrooms where every lesson comes alive.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/classroom.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-ict',
+                    title: 'ICT Laboratory',
+                    description: '30 desktop computers, projector and internet access for digital learning.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/ict-lab.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-garden',
+                    title: 'School Garden',
+                    description: 'Students learn agriculture hands-on in our productive school garden.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/agriculture.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-playground',
+                    title: 'Playground & Outdoor Spaces',
+                    description: 'Plenty of room for play, rest and outdoor learning.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/kids-resting.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-fieldtrips',
+                    title: 'Field Trips & Excursions',
+                    description: 'Learning beyond the classroom — educational visits and outdoor adventures.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/class-visits.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-farm',
+                    title: 'Farm Projects',
+                    description: 'Student-led agricultural initiatives that teach responsibility and sustainability.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/agriculture-2.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-sports',
+                    title: 'Sports Grounds',
+                    description: 'Football pitch, basketball court and athletics track for active, healthy students.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/sports/games.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-library',
+                    title: 'Library & Reading Corner',
+                    description: 'A welcoming space filled with books to inspire a love of reading.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/classroom.jpg',
+                    videoSrc: '',
+                    embed: ''
+                },
+                {
+                    id: 'view-assembly',
+                    title: 'Assembly Grounds',
+                    description: 'Where the school community comes together every morning.',
+                    category: 'school-views',
+                    date: '',
+                    duration: '',
+                    thumbnail: 'assets/images/gallery/campus/kids-resting.jpg',
+                    videoSrc: '',
+                    embed: ''
+                }
+            ];;
+
+            function openVideoPlayer(el) {
+                let video = null;
+                if (el && el.dataset && el.dataset.video) {
+                    try { video = JSON.parse(el.dataset.video); } catch(e) {}
+                }
+                if (!video) {
+                    const id = el && el.dataset ? el.dataset.videoId : null;
+                    if (id) video = videos.find(v => v.id == id);
+                }
+                if (!video) return;
+
+                const overlay = document.createElement('div');
+                overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.92);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:20px;animation:fadeIn 0.25s ease;';
+
+                const closeBtn = document.createElement('button');
+                closeBtn.innerHTML = '<i class="fas fa-times"></i> Close';
+                closeBtn.style.cssText = 'position:absolute;top:16px;right:20px;background:transparent;border:none;color:white;font-size:1.2rem;cursor:pointer;z-index:10;padding:4px 8px;font-weight:600;';
+                overlay.appendChild(closeBtn);
+
+                if (video.videoSrc) {
+                    const vid = document.createElement('video');
+                    vid.src = video.videoSrc;
+                    vid.controls = true;
+                    vid.style.cssText = 'max-width:90vw;max-height:80vh;width:100%;border-radius:8px;box-shadow:0 0 40px rgba(0,0,0,0.6);background:#000;';
+                    vid.setAttribute('playsinline', '');
+                    vid.setAttribute('autoplay', '');
+                    overlay.insertBefore(vid, closeBtn);
+                } else if (video.embed) {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = video.embed + '?autoplay=1&rel=0';
+                    iframe.style.cssText = 'width:100%;height:100%;max-width:1000px;max-height:80vh;border:none;border-radius:8px;';
+                    iframe.setAttribute('allowfullscreen', '');
+                    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+                    overlay.insertBefore(iframe, closeBtn);
+                } else if (video.thumbnail) {
+                    const imgContainer = document.createElement('div');
+                    imgContainer.style.cssText = 'max-width:90vw;max-height:80vh;width:100%;display:flex;flex-direction:column;align-items:center;';
+                    const img = document.createElement('img');
+                    img.src = video.thumbnail;
+                    img.alt = video.title || '';
+                    img.style.cssText = 'max-width:90vw;max-height:70vh;width:100%;border-radius:8px;box-shadow:0 0 40px rgba(0,0,0,0.6);object-fit:contain;';
+                    imgContainer.appendChild(img);
+                    overlay.insertBefore(imgContainer, closeBtn);
+                } else {
+                    const fallback = document.createElement('div');
+                    fallback.style.cssText = 'color:white;text-align:center;padding:40px;';
+                    fallback.innerHTML = '<i class="fas fa-video" style="font-size:3rem;margin-bottom:12px;opacity:0.5;"></i><p style="font-size:1rem;">Video not available</p>';
+                    overlay.appendChild(fallback);
+                }
+
+                const info = document.createElement('div');
+                info.style.cssText = 'color:white;margin-top:12px;text-align:center;max-width:90vw;';
+                info.innerHTML = '<h3 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:4px;">' + (video.title || '') + '</h3>' +
+                    '<p style="font-size:0.85rem;color:rgba(255,255,255,0.7);margin:0;">' + (video.description || '') + '</p>';
+                overlay.appendChild(info);
+
+                document.body.appendChild(overlay);
+
+                function closeOverlay() {
+                    overlay.remove();
+                }
+                closeBtn.addEventListener('click', closeOverlay);
+                overlay.addEventListener('click', function (e) { if (e.target === overlay) closeOverlay(); });
+                document.addEventListener('keydown', function onKey(e) { if (e.key === 'Escape') { closeOverlay(); document.removeEventListener('keydown', onKey); } });
+            }
+
+            function renderVideos() {
+                if (!grid) return;
+                grid.innerHTML = '';
+                emptyState.style.display = 'none';
+
+                const filtered = currentCategory !== 'all'
+                    ? videos.filter(v => v.category === currentCategory)
+                    : videos;
+
+                if (filtered.length === 0) {
+                    emptyState.style.display = 'block';
+                    return;
+                }
+
+                filtered.forEach(function (video) {
+                    const card = document.createElement('div');
+                    card.className = 'video-card';
+                    card.dataset.video = JSON.stringify(video);
+                    const catClass = (video.category || 'student-life').replace(/[^a-z0-9-]/g, '');
+                    const thumbSrc = video.thumbnail || 'https://picsum.photos/seed/' + (video.id || '') + '/400/300';
+                    card.innerHTML =
+                        '<div class="video-thumbnail" data-protected style="position:relative;border-radius:var(--radius-md);overflow:hidden;background:var(--bg-light);aspect-ratio:16/9;cursor:pointer;" onclick="openVideoPlayer(this)">' +
+                            '<img src="' + thumbSrc + '" alt="' + (video.title || '') + '" style="width:100%;height:100%;object-fit:cover;" loading="lazy">' +
+                            '<div class="video-play-overlay" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,86,163,0.85);border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;color:white;transition:var(--transition);">' +
+                                '<i class="fas fa-play" style="font-size:1.3rem;margin-left:3px;"></i>' +
+                            '</div>' +
+                            (video.duration ? '<div style="position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,0.7);color:white;padding:4px 8px;border-radius:4px;font-size:0.7rem;">' + video.duration + '</div>' : '') +
+                        '</div>' +
+                        '<div style="padding:12px 4px;">' +
+                            '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">' +
+                                '<span style="background:var(--bg-light);padding:3px 8px;border-radius:20px;font-size:0.7rem;color:var(--text-light);font-weight:500;text-transform:uppercase;">' + (video.category || '') + '</span>' +
+                                (video.date ? '<span style="font-size:0.7rem;color:var(--text-light);">' + video.date + '</span>' : '') +
+                            '</div>' +
+                            '<h3 style="font-family:var(--font-heading);font-size:1rem;color:var(--text-dark);font-weight:700;margin-bottom:4px;line-height:1.3;">' + (video.title || '') + '</h3>' +
+                            '<p style="font-size:0.8rem;color:var(--text-light);line-height:1.4;margin:0;">' + (video.description || '') + '</p>' +
+                        '</div>';
+                    grid.appendChild(card);
+                });
+            }
+
+            if (categoryTabs) {
+                categoryTabs.addEventListener('click', function (e) {
+                    const btn = e.target.closest('.activity-filter-btn');
+                    if (!btn) return;
+                    categoryTabs.querySelectorAll('.activity-filter-btn').forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    currentCategory = btn.dataset.category;
+                    renderVideos();
+                    if (schoolViewsIntro) {
+                        schoolViewsIntro.style.display = (currentCategory === 'school-views') ? 'block' : 'none';
+                    }
+                });
+            }
+
+            renderVideos();
+        })();
+    </script>
+</body>
+</html>

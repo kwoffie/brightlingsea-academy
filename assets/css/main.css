@@ -1,0 +1,2718 @@
+/* ==== Self-hosted webfonts (replaces the Google Fonts CDN) ====
+   Variable TTFs from tools/fonts/ converted to woff2; @font-face
+   declarations must stay at the top so --font-main / --font-heading
+   resolve everywhere below. ==== */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-var.woff2') format('woff2-variations'),
+         url('../fonts/inter-var.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/playfair-var.woff2') format('woff2-variations'),
+         url('../fonts/playfair-var.woff2') format('woff2');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================================================
+   BRIGHTLINGSEA ACADEMY — MAIN STYLESHEET
+   School Colors: Royal Blue (#0056A3), Orange (#FF6B35), White (#FFFFFF)
+   ========================================================= */
+
+/* ========== CSS VARIABLES — SHARED THEME SYSTEM ==========
+   ONE blue family, ONE orange accent, WHITE for contrast.
+
+   Blue family   : #0056A3 (royal/primary) · #0A2540 (deep navy) ·
+                   #003D7A (deeper) · #14365E (mid) · #E6F0FA (pale tint)
+   Orange accent : #FF6B35 (brand, decorative/large only) ·
+                   #BA4620 (deep, for small text + button fills) ·
+                   #FFF0EB (pale tint)
+   Secondary     : #B8860B refined amber — LIMITED professional role only
+                   (rule lines, borders and small insignia). Measured:
+                   4.77:1 on #0A2540 (text-safe) but 3.25:1 on white and
+                   3.08:1 on #1A4C83 — so never body text on light or mid-blue.
+   Contrast rule : white text on blue/orange surfaces; deep-navy text on
+                   white / very-light-blue surfaces. Small orange TEXT uses
+                   --orange-deep (5.27:1 on white, 4.57:1 on the palest tint);
+                   #FF6B35 is kept for accents on dark surfaces (5.48:1 on
+                   --blue-dark) where it reads at full strength.
+
+   The light theme lives here on :root; the dark theme overrides the same
+   tokens under `body.dark-mode` (see dark-mode.css), so every section,
+   card and button switches by changing tokens — not by duplicating rules.
+
+   Accent ink switching
+   --------------------
+   --accent-ink is the colour for *accent text* (.text-accent, dates, tags),
+   resolved per surface:
+     light surfaces  -> --orange-deep   (--accent-ink-light)
+     blue/dark bands -> --orange        (--accent-ink-dark)
+   Rules only have to set `--accent-ink` on the band; descendants inherit it.
+   ========================================================= */
+:root {
+    /* ---- Blue family (light theme: light blue dominant) ---- */
+    --blue: #0056A3;
+    --blue-dark: #0A2540;
+    --blue-deeper: #003D7A;
+    --blue-mid: #14365E;
+    /* --blue-light stays a PALE tint: it is used as a border/decoration
+       colour in light mode (see .activity-filter-btn, .gallery-item-inner
+       gradient), so it must not become a dark surface. */
+    --blue-light: #E6F0FA;
+    --blue-tint: #DCE9F8;
+
+    /* ---- Orange accent (single accent family) ---- */
+    --orange: #FF6B35;
+    --orange-dark: #A94218;
+    --orange-refined: #E85D2C;
+    --orange-light: #FFF0EB;
+    /* Deep orange: AA-safe for small text on every light surface AND for
+       white text on an orange fill (5.27:1 either way). */
+    --orange-deep: #BA4620;
+    --orange-deep-hover: #9E3A19;
+
+    /* ---- Accent ink (see header note) ---- */
+    --accent-ink-light: var(--orange-deep);
+    --accent-ink-dark: var(--orange);
+    --accent-ink: var(--accent-ink-light);
+
+    /* ---- White-for-contrast helpers (blue surfaces) ---- */
+    --on-blue: #FFFFFF;
+    --on-blue-dim: rgba(255, 255, 255, 0.86);
+    --on-blue-muted: rgba(255, 255, 255, 0.72);
+    /* The one blue band gradient reused by every deep-blue section. */
+    --band-blue: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, var(--blue-dark) 100%);
+
+    /* ---- Refined secondary accent — limited professional role ---- */
+    --secondary-accent: #B8860B;
+    --secondary-accent-soft: rgba(184, 134, 11, 0.12);
+
+    /* ---- Legacy aliases: the old yellow now rides the orange family ---- */
+    --yellow: #FF6B35;
+    --yellow-dark: #CC5529;
+    --yellow-light: #FFF0EB;
+
+    /* ---- Text (light theme) ---- */
+    --text-dark: #0A2540;
+    --text-gray: #41586F;
+    /* #64798F measured 4.49:1 on white and 3.86:1 on --bg-lighter, i.e. it
+       missed AA on every light surface. #566A7E clears 4.5:1 everywhere
+       (5.59 white · 5.05 pale blue · 4.84 tint · 4.80 #E4EFFA). */
+    --text-light: #566A7E;
+    --white: #FFFFFF;
+
+    /* ---- Surfaces (light theme: light blue dominant, white for breathing room) ---- */
+    --bg-light: #F2F8FE;
+    --bg-lighter: #E4EFFA;
+    --surface-card: #FFFFFF;
+    --surface-card-alt: #F5FAFF;
+    --surface-card-hover: #EAF3FC;
+    --surface-blue: #0056A3;
+    --surface-blue-deep: #0A2540;
+    --surface-tint: #E6F0FA;
+    --border-soft: rgba(0, 86, 163, 0.14);
+
+    --shadow-sm: 0 2px 8px rgba(0, 86, 163, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 86, 163, 0.12);
+    --shadow-lg: 0 8px 30px rgba(0, 86, 163, 0.15);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --max-width: 1200px;
+    --header-height: 80px;
+    --transition: all 0.3s ease;
+    --duration: 0.3s;
+    --duration-long: 0.6s;
+    --easing: ease;
+}
+
+/* ---- DARK THEME TOKENS ----
+   Deep blue dominant; orange survives only as a small accent. Declared on
+   <html> as well as <body> so tokens resolve even before the class lands on
+   <body> (dark-mode.js sets both).
+
+   Because every deep-blue band already paints itself blue in BOTH themes,
+   dark mode mostly has to keep text white and let the accent ink resolve to
+   the bright brand orange (#FF6B35 = 5.48:1 on --blue-dark, 4.61:1 on the
+   #103159 card) instead of the deep orange used on light surfaces. */
+body.dark-mode,
+html.dark-mode {
+    --bg-light: #08182B;
+    --bg-lighter: #0E2B4A;
+    --surface-card: #103159;
+    --surface-card-alt: #143C6B;
+    --surface-card-hover: #1A4C83;
+    --surface-tint: #103159;
+    --border-soft: rgba(255, 255, 255, 0.14);
+    --text-dark: #F2F7FD;
+    --text-gray: #C3D1E3;
+    --text-light: #9DB0C9;
+    --blue-light: #16375C;
+    --blue-tint: #122F52;
+    --accent-ink: var(--accent-ink-dark);
+    /* Light surfaces no longer exist in dark mode: keep the deep orange out
+       of the palette so nothing paints #BA4620 on a dark card (3.36:1). */
+    --accent-ink-light: var(--orange);
+}
+
+
+/* ========== PAGE TRANSITIONS ==========
+   Progressive enhancement only: content is fully visible by default and the
+   guard adds .page-enter on scripted entry for a soft fade-up. If JS is
+   disabled, slow, or the guard is missing, nothing is ever hidden (unlike
+   the old body.page-leave design, which blanked the page until load). */
+body.page-enter {
+    /* NO animation-fill-mode on purpose: `both` keeps the finished
+       animation's transform applied to <body> forever (as an identity
+       matrix) — and ANY body transform becomes the containing block for
+       every position:fixed descendant (gallery lightbox, cookie banner,
+       search overlay), stretching them over the whole document instead
+       of the viewport. With default fill the body reverts to no
+       transform the moment the entrance finishes. */
+    animation: pageEnter var(--duration-long) var(--easing);
+}
+@keyframes pageEnter {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+/* Legacy classes kept as aliases so any cached/older guard markup degrades
+   to visible content rather than a stuck hidden page. */
+body.page-leave {
+    opacity: 1;
+    transform: none;
+}
+body.page-ready {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    body.page-enter {
+        animation: none;
+    }
+    body.page-leave,
+    body.page-ready {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ========== RESET ========== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Bumped from 16px: the whole type scale is rem-based, so this lifts
+       every size on every page by ~6% at once without touching breakpoints. */
+    font-size: 17px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-gray);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========== UTILITIES ========== */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+/* Accent text follows --accent-ink, which every deep-blue band re-points to
+   the bright brand orange; light surfaces keep the AA-safe deep orange. */
+.text-accent { color: var(--accent-ink); }
+.text-blue { color: var(--blue); }
+.text-yellow { color: var(--yellow); }
+
+.hide-mobile { display: inline; }
+@media (max-width: 768px) {
+    .hide-mobile { display: none; }
+}
+.mobile-only { display: none; }
+@media (max-width: 768px) {
+    .mobile-only { display: inline-block; }
+}
+
+.section-tag {
+    display: inline-block;
+    background: var(--blue);
+    color: var(--white);
+    padding: 4px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Solid blue: the primary action. White on --blue is 7.3:1, so it clears AA
+   comfortably in either theme. Previously referenced by 6 pages
+   (contact, alumni, campus, departments, staff, 500) with no rule at all,
+   which left those buttons rendering as transparent outlines. */
+.btn-blue {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+.btn-blue:hover {
+    background: var(--blue-dark);
+    border-color: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 86, 163, 0.3);
+}
+
+.btn-lg {
+    padding: 16px 36px;
+    font-size: 1.05rem;
+    border-radius: var(--radius-md);
+}
+
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+}
+
+.btn-orange {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+}
+
+.btn-orange:hover {
+    background: var(--orange-dark);
+    border-color: var(--orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+}
+
+.btn-outline-blue {
+    background: transparent;
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-outline-blue:hover {
+    background: var(--blue);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Neutral outline: the secondary action (Back / cancel). Uses the text
+   colour for the label so it stays AA on the card surface in both themes. */
+.btn-outline {
+    background: transparent;
+    color: var(--text-dark);
+    border-color: var(--border-soft);
+}
+
+.btn-outline:hover {
+    background: var(--surface-card-hover);
+    border-color: var(--blue);
+    color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-white:hover {
+    background: var(--white);
+    color: var(--blue);
+    border-color: var(--white);
+}
+
+.btn-white {
+    background: var(--white);
+    color: var(--blue);
+    border-color: var(--white);
+}
+
+.btn-white:hover {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+/* ========== NAVIGATION ========== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    height: var(--header-height);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  /* hamburger sits top-right */
+    position: relative;         /* brand lockup is absolutely centered */
+    height: 100%;
+}
+
+.brand-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.brand-logo {
+    /* Transparent so the crest blends with the header background
+       in both light and dark mode (no white box). */
+    width: 76px;
+    height: 76px;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    overflow: hidden;
+    transition: var(--transition);
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
+}
+
+/* Real school crest inside the brand mark (replaces the old fa-school icon) */
+.brand-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-link:hover .brand-logo {
+    transform: rotate(-8deg);
+    box-shadow: 0 4px 12px rgba(0, 86, 163, 0.3);
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--text-dark);
+    display: block;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 0.6rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    display: block;
+    margin-top: 3px;
+}
+
+
+/* ========== NAV DRAWER ========== */
+.site-header { overflow: visible; }
+.site-search { flex-shrink: 0; }
+.nav-menu {
+    display: flex;
+    position: fixed;
+    top: var(--header-height);
+    right: -110%;
+    bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 36px 30px;
+    gap: 4px;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: right 0.4s ease, visibility 0s linear 0.4s;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    width: min(420px, 92vw);
+    z-index: 999;
+}
+.nav-menu.open {
+    right: 0;
+    visibility: visible;
+    transition: right 0.4s ease;
+}
+.nav-link {
+    position: relative;
+    display: block;
+    padding: 16px 18px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-gray);
+    text-align: center;
+    transition: color 0.25s ease;
+}
+.nav-link:hover,
+.nav-link.active { color: var(--blue); }
+.nav-link.active { font-weight: 700; }
+/* Animated underline: grows from center on hover; persistent on the
+   active page's link. */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    width: calc(100% - 44px);
+    height: 2px;
+    border-radius: 1px;
+    background: var(--orange);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after { transform: translateX(-50%) scaleX(1); }
+.nav-link:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 3px;
+}
+.nav-cta { margin-top: auto; padding-top: 16px; }
+.nav-cta .btn-orange {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 20px;
+    font-size: 1.15rem;
+}
+.mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Explore group: mobile/tablet = heading + two-column mini-sitemap (drawer).
+   Desktop (>=993px) = the same markup becomes a 3-column mega-menu panel. */
+.nav-explore-group {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bg-lighter);
+    position: relative;
+}
+.nav-explore-heading {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin: 6px 0 12px;
+}
+.nav-explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 12px;
+}
+.nav-explore-link {
+    font-size: 1.15rem;
+    padding: 13px 10px;
+}
+.nav-explore-link::after { bottom: 7px; }
+
+/* Mega-menu column headings (injected by JS on desktop grouping). Hidden
+   in the drawer so mobile keeps the flat 2-column sitemap look. */
+.nav-mega-col-label {
+    display: none;
+}
+
+/* Desktop Explore toggle button (injected by JS). Hidden in drawer mode. */
+.nav-explore-toggle { display: none; }
+
+/* ========== DESKTOP MEGA MENU (>=993px) ========== */
+@media (min-width: 993px) {
+    .nav-container { justify-content: space-between; }
+    .brand-link { position: static; transform: none; }
+    .mobile-menu-toggle { display: none; }
+    /* The same <ul> stops being a slide-in drawer and becomes the
+       horizontal desktop bar. */
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        overflow: visible;
+        visibility: visible;
+        width: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        transition: none;
+    }
+    .nav-menu.open > li { animation: none; }
+    .nav-menu > li { position: relative; }
+    .nav-menu .nav-link {
+        font-size: 0.98rem;
+        padding: 12px 14px;
+        text-align: left;
+        white-space: nowrap;
+    }
+    .nav-menu .nav-link::after { width: calc(100% - 28px); }
+    /* The Explore group becomes the dropdown host. */
+    .nav-menu .nav-explore-group {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        position: static;
+    }
+    .nav-menu .nav-explore-heading { display: none; }
+    .nav-explore-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font-main);
+        font-size: 0.98rem;
+        font-weight: 500;
+        color: var(--text-gray);
+        padding: 12px 14px;
+        white-space: nowrap;
+        transition: color 0.25s ease;
+    }
+    .nav-explore-toggle:hover { color: var(--blue); }
+    .nav-explore-toggle .fa-chevron-down {
+        font-size: 0.7rem;
+        transition: transform 0.25s ease;
+    }
+    .nav-explore-group.mega-open .nav-explore-toggle .fa-chevron-down {
+        transform: rotate(180deg);
+    }
+    /* Mega panel: white surface, royal-blue headings, orange accents. */
+    .nav-menu .nav-explore-grid {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(8px);
+        min-width: 620px;
+        max-width: min(760px, calc(100vw - 48px));
+        background: var(--white);
+        border: 1px solid var(--bg-lighter);
+        border-top: 4px solid var(--orange);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        padding: 24px 28px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 28px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.25s ease, visibility 0s linear 0.25s, transform 0.25s ease;
+        z-index: 1001;
+    }
+    .nav-explore-group.mega-open .nav-explore-grid,
+    .nav-explore-group:focus-within .nav-explore-grid {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .nav-mega-col { display: flex; flex-direction: column; gap: 2px; }
+    .nav-mega-col-label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--blue);
+        padding-bottom: 10px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid var(--orange);
+    }
+    .nav-menu .nav-explore-link {
+        font-size: 0.92rem;
+        font-weight: 500;
+        padding: 9px 10px;
+        border-radius: 8px;
+        color: var(--text-gray);
+    }
+    .nav-menu .nav-explore-link:hover {
+        color: var(--blue);
+        background: var(--blue-light);
+    }
+    .nav-menu .nav-explore-link::after { display: none; }
+    .nav-menu .nav-explore-link.active {
+        color: var(--blue);
+        font-weight: 700;
+        background: var(--blue-light);
+    }
+}
+
+/* Drawer entrance: items stagger in as the panel slides open. */
+@keyframes menuIn {
+    from { opacity: 0; transform: translateX(18px); }
+    to { opacity: 1; transform: none; }
+}
+.nav-menu.open > li { animation: menuIn 0.45s var(--easing) both; }
+.nav-menu.open > li:nth-child(1) { animation-delay: 0.05s; }
+.nav-menu.open > li:nth-child(2) { animation-delay: 0.10s; }
+.nav-menu.open > li:nth-child(3) { animation-delay: 0.15s; }
+.nav-menu.open > li:nth-child(4) { animation-delay: 0.20s; }
+.nav-menu.open > li:nth-child(5) { animation-delay: 0.25s; }
+.nav-menu.open > li:nth-child(6) { animation-delay: 0.30s; }
+
+@media (max-width: 380px) {
+    .nav-explore-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    position: relative;
+    /* Enlarged welcome section: taller than the viewport so the full
+       background photo has room to breathe above and below the copy. */
+    min-height: 130vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 160px 20px 100px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--blue-dark);
+    background-image:
+        /* Base fallback only — the photo layer sits above this, with its own
+           light tint in .hero-overlay so the full picture stays visible. */
+        linear-gradient(135deg, rgba(0, 86, 163, 0.06) 0%, rgba(0, 61, 122, 0.04) 50%, rgba(0, 86, 163, 0.06) 100%);
+    z-index: 0;
+}
+
+/* ========== HERO BACKGROUND VIDEO SLOT ==========
+   Hidden until a real file is dropped at assets/video/hero-background.*.
+   The markup in index.html carries style="display:none"; removing that
+   attribute + adding the file activates the layer. Tint keeps hero text
+   readable over any future frame. */
+.hero .hero-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.45;
+}
+
+/* ========== PROTECTED MEDIA ==========
+   Opt-in deterrent for hero video / future gallery hero media only.
+   Elements WITHOUT data-downloadable keep normal right-click/save. */
+.media-protected {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    /* Sits ABOVE the photo layer: brand-coloured warm glows over a light
+       full-photo tint, so the full background picture shows through this
+       wash instead of hiding behind a wall of blue. The top half stays
+       nearly clear for the crest; the bottom half carries the readability
+       scrim for the headline and buttons. The crest and copy sit at z-index
+       3, above this wash, so neither blocks the other. */
+    background:
+        linear-gradient(180deg, rgba(0, 61, 122, 0.06) 0%, rgba(0, 61, 122, 0.18) 42%, rgba(0, 40, 80, 0.66) 100%),
+        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 40%);
+    z-index: 1;
+}
+
+.hero-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0.05;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 36px),
+        repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 36px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    text-align: center;
+    /* Copy sits above the photo wash, so this panel stays transparent — the
+       crest floats over the open photo at the top and the scrim lives on
+       .hero-overlay behind the headline, so photo and logo never cover
+       each other. */
+    background: transparent;
+    padding: 60px 36px 40px;
+    border-radius: var(--radius-lg);
+}
+
+/* Split hero: crest docked left, copy right — the logo shares the row with
+   the text instead of stacking over it, so it never covers photo faces or
+   the headline. Falls back to the centred stack below 900px. */
+.hero-content.hero-split {
+    max-width: 1160px;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-split .hero-crest {
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.hero-split .hero-crest img {
+    width: 270px !important;
+    max-width: 270px !important;
+}
+
+.hero-split .hero-copy {
+    min-width: 0;
+}
+
+.hero-split .hero-cta-group,
+.hero-split .hero-stats {
+    justify-content: flex-start;
+}
+
+@media (max-width: 900px) {
+    .hero-content.hero-split {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    .hero-split .hero-crest {
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+    .hero-split .hero-crest img {
+        width: 200px !important;
+        max-width: 200px !important;
+    }
+    .hero-split .hero-cta-group,
+    .hero-split .hero-stats {
+        justify-content: center;
+    }
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 107, 53, 0.15);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: var(--yellow);
+    margin-bottom: 24px;
+    animation: fadeInDown 0.6s ease;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--yellow);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.text-slider-title {
+    display: block;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.school-name-highlight {
+    display: block;
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    background: none;
+    position: relative;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.school-name-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--orange);
+    border-radius: 2px;
+    opacity: 0.9;
+}
+
+/* (Hero readability scrim lives on .hero-content above.) */
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 36px;
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+/* Gold accent reserved for DARK backgrounds (hero / page-hero / CTA) where it reads
+   at high contrast. On light backgrounds .text-accent keeps the global orange above
+   (line 82) so contrast never falls below AA. */
+.hero .text-accent,
+.page-hero .text-accent,
+.cta-section .text-accent {
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* Was the retired yellow token. The hero stats sit on the deep blue band,
+       so a light-blue shade of the same family keeps them readable and on-theme
+       (E6F0FA on the band clears AA comfortably). */
+    color: var(--blue-light);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.scroll-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: var(--white);
+    transition: var(--transition);
+    font-size: 1.2rem;
+}
+
+.scroll-link:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(4px);
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-stats {
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .text-slider-title {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-cta-group .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-stats {
+        gap: 20px;
+    }
+    .stat-divider {
+        display: none;
+    }
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-cta-group {
+        gap: 12px;
+    }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ========== QUICK LINKS SECTION ========== */
+.quick-links-section {
+    padding: 60px 0;
+    background: var(--blue-dark);
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Centred two-card variant used on the homepage: About Us + Contact Us sit
+   in the middle of the band rather than hugging the left edge. */
+.quick-links-grid--center {
+    grid-template-columns: repeat(2, minmax(0, 420px));
+    justify-content: center;
+}
+
+.quick-link-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 28px 24px;
+    border-radius: var(--radius-md);
+    text-align: left;
+    transition: var(--transition);
+    overflow: hidden;
+    min-height: 160px;
+}
+
+.quick-link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: var(--transition);
+    border-radius: var(--radius-md);
+}
+
+.quick-link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.quick-link-card:hover .quick-link-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.quick-link-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.quick-link-content {
+    position: relative;
+    z-index: 1;
+}
+
+.quick-link-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    transition: var(--transition);
+}
+
+.quick-link-desc {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
+
+.quick-link-arrow {
+    position: relative;
+    z-index: 1;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.quick-link-card:hover .quick-link-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--orange);
+}
+
+.card-blue {
+    background: var(--surface-card);
+    border: 1px solid var(--bg-lighter);
+}
+
+.card-blue::before {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+}
+.card-blue .quick-link-icon { background: var(--blue); color: var(--white); }
+.card-blue:hover { background: var(--blue-dark); border-color: var(--blue-dark); }
+.card-blue:hover .quick-link-title { color: var(--white); }
+.card-blue:hover .quick-link-desc { color: var(--on-blue-dim); }
+.card-blue:hover .quick-link-icon { background: var(--blue); color: var(--white); box-shadow: 0 0 0 2px var(--orange); }
+
+.card-orange {
+    background: var(--surface-card);
+    border: 1px solid var(--bg-lighter);
+}
+
+.card-orange::before {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+}
+.card-orange .quick-link-icon { background: var(--blue-dark); color: var(--white); box-shadow: 0 0 0 2px var(--orange); }
+.card-orange:hover { background: var(--blue-dark); border-color: var(--orange); }
+.card-orange:hover .quick-link-title { color: var(--white); }
+.card-orange:hover .quick-link-desc { color: var(--on-blue-dim); }
+.card-orange:hover .quick-link-icon { background: var(--white); color: var(--blue-dark); box-shadow: 0 0 0 2px var(--orange); }
+
+.card-yellow {
+    background: var(--surface-card);
+    border: 1px solid var(--bg-lighter);
+}
+
+.card-yellow::before {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+}
+.card-yellow .quick-link-icon { background: var(--blue-dark); color: var(--white); box-shadow: 0 0 0 2px var(--orange); }
+.card-yellow:hover { background: var(--blue-dark); border-color: var(--orange); }
+.card-yellow:hover .quick-link-title { color: var(--white); }
+.card-yellow:hover .quick-link-desc { color: var(--on-blue-dim); }
+.card-yellow:hover .quick-link-icon { background: var(--white); color: var(--blue-dark); box-shadow: 0 0 0 2px var(--orange); }
+
+@media (max-width: 992px) {
+    .quick-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== ABOUT PREVIEW SECTION ==========
+   Blue band. Every text role inside the band is white-on-blue in BOTH themes
+   (the band paints itself blue regardless of theme, so navy/-grey tokens must
+   never be used here). */
+.about-preview {
+    padding: 80px 0;
+    background: var(--band-blue);
+    --accent-ink: var(--accent-ink-dark);
+}
+
+.about-preview .section-title,
+.about-preview .section-subtitle {
+    color: var(--white);
+}
+
+.about-preview .section-subtitle {
+    color: var(--on-blue-dim);
+}
+
+.about-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-preview-image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--blue-light) 0%, var(--bg-lighter) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--blue);
+}
+
+.building-icon {
+    font-size: 4rem;
+    opacity: 0.6;
+}
+
+.placeholder-text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.image-overlay-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 24px;
+    background: linear-gradient(transparent, rgba(0, 86, 163, 0.85));
+}
+
+.badge-semi-transparent {
+    display: inline-block;
+    background: var(--yellow);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.about-preview-content {
+    padding: 10px 0;
+}
+
+.preview-heading {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.preview-text {
+    color: var(--on-blue-dim);
+    margin-bottom: 16px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.preview-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.preview-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.preview-feature .text-blue,
+.preview-feature .text-accent {
+    color: var(--white);
+}
+
+.feature-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.about-preview-content .btn {
+    margin-top: 8px;
+}
+
+/* On the blue band the blue-outline button disappears (1.79:1) — use the
+   white outline variant instead. */
+.about-preview-content .btn-outline-blue {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.55);
+    color: var(--white);
+}
+.about-preview-content .btn-outline-blue:hover {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--blue-dark);
+}
+
+@media (max-width: 992px) {
+    .about-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-preview {
+        padding: 40px 0;
+    }
+    .preview-heading {
+        font-size: 1.6rem;
+    }
+    .preview-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========== WHY CHOOSE US SECTION ==========
+   Blue band; the section header sits directly on it, so it needs white text.
+   The cards keep their own (theme-aware) surfaces. */
+.why-choose {
+    padding: 80px 0;
+    background: var(--band-blue);
+    --accent-ink: var(--accent-ink-dark);
+}
+
+.why-choose .section-title {
+    color: var(--white);
+}
+
+.why-choose .section-subtitle {
+    color: var(--on-blue-dim);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.why-card {
+    background: var(--surface-card);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--bg-lighter);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    /* Each card carries its accent through --why-streak (set by the
+       .why-accent-* classes below), so the top streak doubles as the card's
+       identity. Namespaced as .why-accent-* on purpose: the older .card-blue
+       / .card-orange / .card-yellow classes are shared with the homepage
+       quick-links and must keep their own colours. */
+    background: var(--why-streak, var(--blue));
+    transition: var(--transition);
+}
+
+/* Per-card accent fingerprint: blue-family shades, the single orange accent,
+   and the limited gold secondary accent. The retired legacy yellow is gone. */
+.why-accent-blue      { --why-streak: var(--blue); }
+.why-accent-blue-dark { --why-streak: var(--blue-dark); }
+.why-accent-orange    { --why-streak: var(--orange-deep); }
+.why-accent-gold      { --why-streak: var(--secondary-accent); }
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.why-card:hover::after {
+    height: 6px;
+    /* the streak glows in its own accent colour on hover */
+    box-shadow: 0 2px 12px -2px var(--why-streak, var(--blue));
+}
+
+.why-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--white);
+    /* One cohesive blue panel across all four cards. The glyph is always
+       white, so white-on-blue (7.3:1) holds AA in both themes. */
+    background: var(--blue);
+    margin-bottom: 16px;
+    transition: var(--transition);
+}
+
+.why-card:hover .why-card-icon {
+    transform: scale(1.1);
+}
+
+.why-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.why-card-text {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* Card number + short rule: the refined secondary accent (gold) appears here
+   as decoration only — never as text, so it carries no AA burden. The number
+   itself uses --text-light, which clears AA on both the white card and the
+   dark card surface. */
+.why-card-num {
+    display: block;
+    width: 46px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-light);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--secondary-accent);
+}
+
+/* Micro-claim pill: the small orange accent moment (white on --orange-deep =
+   5.27:1 AA). The blue variant (white on --blue = 7.3:1) keeps the set
+   balanced without introducing a second accent family. */
+.why-card-tag {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    background: var(--orange-deep);
+    color: var(--white);
+}
+
+.why-card-tag.why-tag-blue {
+    background: var(--blue);
+}
+
+@media (max-width: 992px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+    .why-choose {
+        padding: 40px 0;
+    }
+}
+
+/* ========== EVENTS PREVIEW SECTION ==========
+   The Upcoming Events band reuses the "Ready to Join Brightlingsea Academy?"
+   surface treatment: a deep blue gradient field (matching .cta-bg) so the
+   whole events block reads as one blue surface instead of white. */
+.events-preview {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--band-blue);
+    /* Accent text on this band uses the bright brand orange. */
+    --accent-ink: var(--accent-ink-dark);
+}
+
+/* White cards sitting inside the blue band bring their own light surface, so
+   the accent ink has to step back down to the AA-safe deep orange there.
+   (.anniversary-feature is itself a blue card — it keeps the bright accent.) */
+body:not(.dark-mode) .events-preview .event-card {
+    --accent-ink: var(--accent-ink-light);
+}
+
+.events-preview-wrap {
+    background: transparent;
+    border: 1px solid var(--blue-dark);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* White-for-contrast: headings and body copy on this blue field */
+.events-preview .section-heading {
+    color: var(--white);
+}
+.events-preview .section-heading::after {
+    background: var(--orange);
+}
+
+.events-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.events-preview-header .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    margin-right: 16px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    background: var(--blue-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--blue);
+}
+
+/* Solid brand-color header bar with level tag */
+.event-card-header {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+}
+.event-card-header.header-blue { background: var(--blue); }
+.event-card-header.header-orange { background: var(--orange-deep); }
+.event-card-header.header-blue-dark { background: var(--blue-dark); }
+
+.event-category {
+    display: inline-block;
+    padding: 4px 12px;
+    /* Solid blue chip: rgba(255,255,255,0.18) over the orange fill flattened
+       to a light peach and dropped white text to 2.39:1. */
+    background: var(--blue-dark);
+    border-radius: 30px;
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.event-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.event-date {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.event-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.event-desc {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.event-read-more {
+    margin-top: auto;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-read-more:hover { color: var(--orange-deep-hover); }
+
+.events-view-all {
+    text-align: center;
+    margin-top: 28px;
+}
+
+/* ========== FEATURED ANNIVERSARY EVENT + COUNTDOWN ========== */
+.anniversary-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    background: var(--band-blue);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.anniversary-feature-media {
+    position: relative;
+    background: var(--blue-dark);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+/* Full-bleed anniversary picture: fills the whole media panel edge to edge. */
+.anniversary-feature-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    opacity: 1;
+}
+
+/* Bottom scrim only — keeps the overlaid countdown legible over the photo
+   without washing out the artwork. */
+.anniversary-feature-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 37, 64, 0.05) 0%, rgba(10, 37, 64, 0.35) 55%, rgba(10, 37, 64, 0.85) 100%);
+    pointer-events: none;
+}
+
+.anniversary-feature-body {
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.anniversary-feature-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    align-self: flex-start;
+    padding: 5px 14px;
+    background: var(--orange-deep);
+    color: var(--white);
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.anniversary-feature-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.anniversary-feature-theme {
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--orange);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    padding-left: 14px;
+    border-left: 3px solid var(--orange);
+}
+
+.anniversary-feature-desc {
+    font-size: 0.92rem;
+    color: var(--on-blue-dim);
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.anniversary-feature-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.anniversary-feature-date i { color: var(--orange); }
+
+/* Countdown overlaid on top of the anniversary picture. It is anchored to the
+   bottom of the full-bleed media panel and centred, sitting above the scrim
+   (z-index 2) but below nothing else in the card. */
+.anniversary-feature-media .anniversary-countdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    padding: 24px 24px 22px;
+}
+
+.countdown-unit {
+    min-width: 74px;
+    padding: 14px 10px;
+    /* Opaque enough that the numbers are measurable against the chip no matter
+       what the photograph behind them looks like (was 0.62 over an unknown
+       frame). */
+    background: rgba(10, 37, 64, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    flex: 0 1 110px;
+    max-width: 110px;
+    backdrop-filter: blur(6px);
+}
+
+.countdown-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+}
+
+.countdown-unit.is-elapsed .countdown-num { color: var(--orange); }
+
+.anniversary-feature-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.anniversary-feature .btn-orange {
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+}
+
+.anniversary-feature .btn-orange:hover {
+    background: var(--orange-dark);
+    color: var(--white);
+}
+
+.anniversary-feature .btn-outline-blue {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.4);
+    color: var(--white);
+}
+
+.anniversary-feature .btn-outline-blue:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+}
+
+@media (max-width: 860px) {
+    .anniversary-feature {
+        grid-template-columns: 1fr;
+    }
+    .anniversary-feature-media { min-height: 280px; }
+    .anniversary-feature-media img { min-height: 280px; }
+    .anniversary-feature-body { padding: 28px 24px; }
+    .anniversary-feature-title { font-size: 1.5rem; }
+    .anniversary-feature-media .anniversary-countdown { padding: 18px 16px 16px; }
+}
+
+@media (max-width: 560px) {
+    .anniversary-feature-media { min-height: 240px; }
+    .anniversary-feature-media img { min-height: 240px; }
+    .anniversary-feature-body { padding: 24px 20px; }
+    .anniversary-feature-media .anniversary-countdown { gap: 8px; padding: 14px 12px 12px; }
+    .countdown-unit { min-width: 60px; padding: 10px 6px; flex-basis: 72px; }
+    .countdown-num { font-size: 1.4rem; }
+}
+
+.anniversary-feature .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 992px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    .events-preview-wrap {
+        padding: 24px;
+    }
+}
+
+/* ========== CTA SECTION ========== */
+.cta-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, var(--blue-dark) 100%);
+    z-index: 0;
+}
+
+.cta-bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.1) 40px, rgba(255,255,255,0.1) 41px);
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 32px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-section .btn-white {
+    background: var(--white);
+    color: var(--blue);
+    border-color: var(--white);
+}
+.cta-section .btn-white:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    .cta-text {
+        font-size: 0.95rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+    background: var(--text-dark);
+    padding-top: 60px;
+}
+
+
+.footer-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 90% 10%, rgba(255, 107, 53, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(255, 107, 53, 0.06) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.footer-brand-link i {
+    font-size: 1.8rem;
+    color: var(--yellow);
+}
+
+/* Real school crest in the footer brand — transparent so it blends
+   with the deep footer background (no white box). */
+.footer-brand-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 10px;
+    padding: 0;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.footer-brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.footer-brand-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--orange);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--yellow);
+    padding-left: 6px;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+}
+
+.footer-contact-list li i {
+    color: var(--yellow);
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 16px;
+}
+
+.footer-contact-list a {
+    color: rgba(255, 255, 255, 0.65);
+    transition: var(--transition);
+}
+
+.footer-contact-list a:hover {
+    color: var(--yellow);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-design-credit {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-design-credit i {
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+/* ========== FOOTER PARTNER STRIP ==========
+   Partner marks sit directly on the footer background (transparent —
+   no white panel or pills) so they match the surrounding surface.
+   A soft light halo keeps dark-authored marks legible on the deep
+   footer blue in both light and dark mode. */
+.footer-partners {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+    padding: 20px 24px;
+    border-radius: var(--radius-lg);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+.footer-partners-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 14px;
+}
+
+.footer-partners-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+}
+
+.footer-partner-logo {
+    height: 120px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    opacity: 1;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    /* Light halo: dark logo ink stays readable on the deep footer blue
+       without any white box behind the mark. */
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.9))
+            drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-partner-logo:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+    .footer-partners {
+        padding: 18px 16px;
+    }
+    .footer-partners-row {
+        gap: 20px 24px;
+    }
+    .footer-partner-logo {
+        height: 88px;
+        max-width: 210px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ========== SCROLL ANIMATIONS ==========
+   .reveal is visible by default; the hidden pre-animation state only applies
+   once main.js confirms IntersectionObserver support (adds
+   .reveal-will-animate). No-JS / old browsers never hide content. */
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.reveal-will-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-will-animate,
+    .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-cta-group,
+    .hero-stats,
+    .badge-dot {
+        animation: none;
+    }
+    .nav-menu {
+        transition: none;
+    }
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ========== HERO PHOTO SLOT ==========
+   Full-bleed candid banner. The <img> self-removes on error, so the
+   existing gradient + overlay + pattern remain as the fallback. */
+.hero-photo-slot {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.hero-photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* The class photo is a wide landscape shot, so anchor the full frame
+       centrally: faces stay visible between the floating crest above and
+       the headline scrim below. */
+    object-position: center 35%;
+}
+
+/* ========== SECTION HEADING (reusable) ========== */
+.section-heading {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 18px;
+}
+.section-heading::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--orange);
+    margin: 12px auto 0;
+}
+
+/* ========== SECTION PICKER ==========
+   Blue band (same family as .cta-bg) instead of a white strip, so the
+   homepage reads blue-dominant from the hero downwards. */
+.section-picker {
+    padding: 48px 0 8px;
+    background: var(--band-blue);
+}
+.picker-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.picker-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 44px;
+    border-radius: 999px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+.picker-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+/* On the blue band the fills step up a shade so each pill still separates
+   from the surface behind it. */
+.picker-orange { background: var(--orange-deep); }
+.picker-orange:hover { background: var(--orange-deep-hover); }
+.picker-blue { background: var(--blue); }
+.picker-blue:hover { background: var(--blue-dark); }
+.picker-blue-dark { background: var(--blue-dark); border: 1px solid rgba(255,255,255,0.28); }
+.picker-blue-dark:hover { background: var(--blue); }
+@media (max-width: 768px) {
+    .picker-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .picker-btn {
+        width: min(100%, 320px);
+    }
+}
+
+/* ========== HOME INTRO ==========
+   Deep-blue band + white copy (was a white strip with navy text). */
+.home-intro {
+    padding: 56px 0 24px;
+    background: var(--band-blue);
+    text-align: center;
+}
+.intro-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    color: var(--white);
+    max-width: 820px;
+    margin: 0 auto 24px;
+}
+.intro-copy {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--on-blue-dim);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+.intro-copy + .intro-copy { margin-top: 14px; }
+
+/* ========== WELCOME BLOCK ==========
+   Blue-family band (was a warm cream/orange wash). The headmaster's welcome
+   is white-on-blue so it stays legible in both themes; orange survives only
+   as the section-heading rule line. */
+.welcome-block {
+    padding: 48px 0 64px;
+    background: var(--band-blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.welcome-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 440px) 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.welcome-photo {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.welcome-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.welcome-text .section-heading {
+    text-align: left;
+    color: var(--white);
+}
+.welcome-text .section-heading::after {
+    margin-left: 0;
+    background: var(--orange);
+}
+.welcome-message {
+    color: var(--on-blue-dim);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.welcome-signature strong {
+    display: block;
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+}
+.welcome-signature span {
+    color: var(--on-blue-muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .welcome-photo {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+/* Reduced-motion for all new components (kept here so the overrides
+   come after the base rules in source order and actually win). */
+@media (prefers-reduced-motion: reduce) {
+    .picker-btn {
+        transition: none;
+        transform: none;
+    }
+    .event-card:hover {
+        transform: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-menu.open > li {
+        animation: none;
+    }
+    .nav-link::after {
+        transition: none;
+    }
+}
+
+/* ===== HERO CREST ===== */
+.hero-crest {
+    /* Floating emblem above the copy: sits over the nearly-clear top of the
+       photo wash (z-index 3, above the picture), with a soft light halo so
+       the crest reads even over bright faces. The photo's focal point is
+       anchored at 35% height, clear of this compact (~200px) badge. No panel
+       behind it — photo and logo share the frame without covering. */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+    animation: fadeInDown 0.6s ease 0.05s both;
+}
+
+.hero-crest img {
+    width: 230px !important;
+    max-width: 230px !important;
+    height: auto !important;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    /* Soft light halo + shadow: transparent crest stays readable
+       over bright photo faces with no white box behind it. */
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.9))
+            drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
+}
+
+/* Below 768px the hero content is centred again, so the crest re-centres with
+   it rather than hugging the left edge of a narrow panel. */
+@media (max-width: 768px) {
+    .hero-crest img {
+        width: 170px !important;
+        max-width: 170px !important;
+    }
+}
+
+/* ===== TAGLINE BAND =====
+   Was a full-width orange gradient slab, i.e. a second accent surface on a
+   blue page. It is now a blue-glass panel with an orange rule: the motto
+   stays highlighted while the band stays blue-dominant (orange = accent). */
+.tagline-band {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-top: 3px solid var(--orange);
+    border-radius: var(--radius-lg);
+    padding: 32px 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.tagline-band::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.tagline-quote {
+    flex-shrink: 0;
+    font-size: 2.5rem;
+    color: var(--orange);
+    opacity: 0.85;
+    line-height: 1;
+}
+
+.tagline-quote-end {
+    flex-shrink: 0;
+    font-size: 2.5rem;
+    color: var(--orange);
+    opacity: 0.85;
+    line-height: 1;
+}
+
+.intro-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-copy {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--on-blue-dim);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* The tagline/motto panel sits on the band, so the band owns the surface. */
+.home-intro {
+    background: var(--band-blue);
+    padding: 48px 0 40px;
+}
+
+@media (max-width: 768px) {
+    .tagline-band {
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 12px;
+    }
+    .tagline-quote,
+    .tagline-quote-end {
+        font-size: 1.8rem;
+    }
+    .intro-copy {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tagline-band {
+        padding: 20px 16px;
+    }
+    .tagline-quote,
+    .tagline-quote-end {
+        font-size: 1.4rem;
+    }
+    .intro-headline {
+        font-size: 1.5rem;
+    }
+}

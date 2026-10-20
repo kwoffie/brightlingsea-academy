@@ -1,0 +1,211 @@
+/* ==========================================================================
+   BRIGHTLINGSEA ACADEMY — FONT AWESOME OFFLINE FALLBACK
+   ==========================================================================
+   Loaded by service-worker.js only when the Font Awesome CDN cannot be
+   reached AND no cached copy exists (i.e. the very first offline visit).
+
+   The real icon font is unavailable in that situation, so every `fa-*`
+   class is mapped to a plain Unicode glyph. Icons lose their styling but
+   keep their meaning instead of rendering as invisible boxes.
+
+   Coverage: every `fa-*` class used anywhere in this project.
+   ========================================================================== */
+
+/* Base: drop the webfont dependency and inherit text styling. */
+[class^="fa-"],
+[class*=" fa-"] {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    display: inline-block;
+    speak: never;
+}
+
+/* Neutral default so an unmapped icon is still visible. */
+[class^="fa-"]::before,
+[class*=" fa-"]::before {
+    content: "\25CF"; /* filled circle */
+}
+
+/* --------------------------------------------------------------------------
+   Brand / people
+   -------------------------------------------------------------------------- */
+.fa-school::before { content: "\1F3EB"; }
+.fa-graduation-cap::before,
+.fa-graduation::before,
+.fa-user-graduate::before { content: "\1F393"; }
+.fa-chalkboard-teacher::before { content: "\1F468\200D\1F3EB"; }
+.fa-users::before, .fa-group::before { content: "\1F465"; }
+.fa-user::before, .fa-user-circle::before,
+.fa-user-tie::before, .fa-user-md::before,
+.fa-user-cog::before, .fa-user-shield::before,
+.fa-users-cog::before, .fa-user-lock::before { content: "\1F464"; }
+.fa-user-plus::before { content: "\2795"; }
+.fa-user-slash::before { content: "\1F6AB"; }
+.fa-baby::before, .fa-child::before { content: "\1F476"; }
+.fa-facebook-f::before { content: "f"; font-weight: 700; }
+.fa-twitter::before { content: "\1D54F"; }
+.fa-whatsapp::before { content: "\1F4AC"; }
+.fa-apple-alt::before { content: "\1F34E"; }
+
+/* --------------------------------------------------------------------------
+   Communication
+   -------------------------------------------------------------------------- */
+.fa-phone-alt::before { content: "\260E"; }
+.fa-mobile-alt::before { content: "\1F4F1"; }
+.fa-envelope::before, .fa-envelope-open-text::before { content: "\2709"; }
+.fa-paper-plane::before { content: "\2708"; }
+.fa-comment-dots::before { content: "\1F4AC"; }
+.fa-bullhorn::before { content: "\1F4E3"; }
+.fa-microphone::before { content: "\1F3A4"; }
+.fa-inbox::before { content: "\1F4E5"; }
+.fa-share::before { content: "\1F517"; }
+
+/* --------------------------------------------------------------------------
+   Navigation / arrows
+   -------------------------------------------------------------------------- */
+.fa-arrow-right::before { content: "\2192"; }
+.fa-arrow-left::before { content: "\2190"; }
+.fa-arrow-up::before { content: "\2191"; }
+.fa-chevron-right::before { content: "\203A"; }
+.fa-chevron-left::before { content: "\2039"; }
+.fa-chevron-down::before { content: "\2304"; }
+.fa-expand::before, .fa-undo::before, .fa-redo::before { content: "\21C4"; }
+.fa-home::before { content: "\1F3E0"; }
+
+/* --------------------------------------------------------------------------
+   Status / actions
+   -------------------------------------------------------------------------- */
+.fa-check::before { content: "\2713"; }
+.fa-check-circle::before { content: "\2714"; }
+.fa-times::before { content: "\2715"; }
+.fa-times-circle::before, .fa-exclamation-circle::before { content: "\26A0"; }
+.fa-exclamation::before { content: "\2757"; }
+.fa-exclamation-triangle::before { content: "\26A0"; }
+.fa-question-circle::before, .fa-info-circle::before { content: "\2139"; }
+.fa-search::before { content: "\1F50D"; }
+.fa-search-minus::before { content: "\1F50E"; }
+.fa-filter::before { content: "\1F5C2"; }
+.fa-eye::before { content: "\1F441"; }
+.fa-eye-slash::before { content: "\1F576"; }
+.fa-save::before { content: "\1F4BE"; }
+.fa-download::before, .fa-cloud-upload-alt::before, .fa-upload::before { content: "\2B07"; }
+.fa-print::before { content: "\1F5A8"; }
+.fa-copy::before { content: "\1F4CB"; }
+.fa-trash-alt::before { content: "\1F5D1"; }
+.fa-plus::before { content: "\2795"; }
+.fa-pen::before { content: "\270F"; }
+.fa-lock::before { content: "\1F512"; }
+.fa-unlock::before { content: "\1F513"; }
+.fa-key::before { content: "\1F511"; }
+.fa-sign-in-alt::before, .fa-sign-out-alt::before { content: "\1F6AA"; }
+.fa-moon::before { content: "\1F319"; }
+.fa-sun::before, .fa-shooting-star::before { content: "\2600"; }
+.fa-star::before { content: "\2605"; }
+.fa-star-and-crescent::before { content: "\262A"; }
+.fa-heart::before { content: "\2665"; }
+.fa-hand-holding-heart::before, .fa-hand-holding-medical::before,
+.fa-hands-helping::before, .fa-handshake::before { content: "\1F91D"; }
+.fa-hand-peace::before { content: "\270C"; }
+.fa-clap::before { content: "\1F44F"; }
+.fa-laugh::before { content: "\1F602"; }
+.fa-smile::before { content: "\1F642"; }
+.fa-spinner::before { content: "\25CC"; }
+.fa-sliders-h::before { content: "\2699"; }
+.fa-cookie-bite::before { content: "\1F36A"; }
+.fa-shield-alt::before { content: "\1F6E1"; }
+
+/* --------------------------------------------------------------------------
+   Place / location / time
+   -------------------------------------------------------------------------- */
+.fa-map-marker-alt::before, .fa-location-dot::before,
+.fa-map-pin::before, .fa-map-marked-alt::before { content: "\1F4CD"; }
+.fa-map::before { content: "\1F5FA"; }
+.fa-globe::before, .fa-globe-africa::before,
+.fa-globe-americas::before { content: "\1F310"; }
+.fa-building::before { content: "\1F3E2"; }
+.fa-concierge-bell::before { content: "\1F6CE"; }
+.fa-road::before { content: "\1F6E3"; }
+.fa-compass::before { content: "\1F9ED"; }
+.fa-clock::before { content: "\1F550"; }
+.fa-calendar::before, .fa-calendar-alt::before { content: "\1F4C5"; }
+.fa-history::before { content: "\1F553"; }
+.fa-camera-retro::before, .fa-images::before, .fa-image::before { content: "\1F4F7"; }
+.fa-video::before { content: "\1F3AC"; }
+.fa-play::before { content: "\25B6"; }
+
+/* --------------------------------------------------------------------------
+   Subjects / academics
+   -------------------------------------------------------------------------- */
+.fa-book::before { content: "\1F4D5"; }
+.fa-book-open::before { content: "\1F4D6"; }
+.fa-newspaper::before, .fa-pages::before { content: "\1F4F0"; }
+.fa-file::before, .fa-file-alt::before,
+.fa-file-invoice::before { content: "\1F4C4"; }
+.fa-file-size::before { content: "\1F4CA"; }
+.fa-folder-open::before { content: "\1F4C2"; }
+.fa-calculator::before { content: "\1F9EE"; }
+.fa-square-root-variable::before { content: "\221A"; }
+.fa-chart-bar::before, .fa-chart-line::before,
+.fa-chart-pie::before { content: "\1F4C8"; }
+.fa-tachometer-alt::before { content: "\23F1"; }
+.fa-flask::before, .fa-mortar-pestle::before { content: "\1F9EA"; }
+.fa-laptop-code::before, .fa-laptop::before { content: "\1F4BB"; }
+.fa-wifi::before { content: "\1F4F6"; }
+.fa-language::before { content: "\1F5E3"; }
+.fa-palette::before { content: "\1F3A8"; }
+.fa-masks-theater::before, .fa-band::before { content: "\1F3AD"; }
+.fa-lightbulb::before { content: "\1F4A1"; }
+.fa-quote-left::before { content: "\201C"; }
+.fa-utensils::before { content: "\1F374"; }
+.fa-coins::before, .fa-money-bill-wave::before { content: "\1F4B0"; }
+.fa-shopping-cart::before { content: "\1F6D2"; }
+.fa-receipt::before { content: "\1F9FE"; }
+.fa-sign::before { content: "\1F6A7"; }
+.fa-briefcase::before { content: "\1F4BC"; }
+.fa-gift::before { content: "\1F381"; }
+.fa-plane::before { content: "\2708"; }
+.fa-mouse-pointer::before { content: "\1F5B1"; }
+
+/* --------------------------------------------------------------------------
+   Sports / activities / awards
+   -------------------------------------------------------------------------- */
+.fa-trophy::before { content: "\1F3C6"; }
+.fa-medal::before, .fa-award::before { content: "\1F3C5"; }
+.fa-running::before { content: "\1F3C3"; }
+.fa-swimmer::before { content: "\1F3CA"; }
+.fa-football::before { content: "\26BD"; }
+.fa-table-tennis::before { content: "\1F3D3"; }
+.fa-bullseye::before { content: "\1F3AF"; }
+.fa-flag::before { content: "\1F3F3"; }
+.fa-cake-candles::before { content: "\1F382"; }
+
+/* --------------------------------------------------------------------------
+   Supplemental coverage — icons used in markup but previously unmapped.
+   Without these, a CDN failure left them as a generic dot.
+   -------------------------------------------------------------------------- */
+.fa-bars::before { content: "\2630"; }
+.fa-bed::before { content: "\1F6CF"; }
+.fa-bus::before { content: "\1F68C"; }
+.fa-calendar-check::before, .fa-calendar-day::before,
+.fa-calendar-star::before { content: "\1F4C5"; }
+.fa-camera::before { content: "\1F4F7"; }
+.fa-certificate::before { content: "\1F396"; }
+.fa-chalkboard-user::before { content: "\1F468\200D\1F3EB"; }
+.fa-door-open::before { content: "\1F6AA"; }
+.fa-futbol::before { content: "\26BD"; }
+.fa-helmet-safety::before { content: "\26D1"; }
+.fa-house-laptop::before { content: "\1F3E0"; }
+.fa-id-card::before { content: "\1FAAA"; }
+.fa-landmark::before { content: "\1F3DB"; }
+.fa-paw::before { content: "\1F43E"; }
+.fa-phone::before { content: "\260E"; }
+.fa-plane-arrival::before { content: "\2708"; }
+.fa-quote-right::before { content: "\201D"; }
+.fa-scroll::before { content: "\1F4DC"; }
+.fa-shield-halved::before { content: "\1F6E1"; }
+.fa-sign-hanging::before { content: "\1FAA7"; }
+.fa-plane::before { content: "\2708"; }
+.fa-stethoscope::before { content: "\1FA7A"; }
+.fa-tshirt::before { content: "\1F455"; }

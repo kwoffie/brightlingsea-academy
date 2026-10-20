@@ -1,0 +1,2049 @@
+{
+  "generated": "2026-09-19T08:21:45+00:00",
+  "source_dir": "updates",
+  "settings": {
+    "jpeg_quality": 82,
+    "max_side": 1600,
+    "near_dupe_bits": 6
+  },
+  "summary": {
+    "kept": 106,
+    "duplicate": 2,
+    "near-duplicate": 0,
+    "error": 0,
+    "excluded": 2
+  },
+  "derivatives": {
+    "specials": {
+      "hero": {
+        "source": "kids in class happy.png",
+        "outputs": [
+          {
+            "path": "assets/images/hero-candid.jpg",
+            "width": 900,
+            "height": 506,
+            "bytes": 71588
+          }
+        ]
+      },
+      "class_learning": {
+        "source": "kids learning in class.png",
+        "outputs": [
+          {
+            "path": "assets/images/class-learning.jpg",
+            "width": 700,
+            "height": 394,
+            "bytes": 43876
+          }
+        ]
+      },
+      "about_side_view": {
+        "source": "Scool side-front view.png",
+        "outputs": [
+          {
+            "path": "assets/images/about-side-view.jpg",
+            "width": 670,
+            "height": 837,
+            "bytes": 89076
+          }
+        ]
+      },
+      "headmaster_wife": {
+        "source": "headmaster and his wife's picture.png",
+        "outputs": [
+          {
+            "path": "assets/images/headmaster-wife.jpg",
+            "width": 1175,
+            "height": 661,
+            "bytes": 167624
+          }
+        ]
+      },
+      "principal": {
+        "source": "brighlingsea headmaster's picture.png",
+        "outputs": [
+          {
+            "path": "assets/images/principal.jpg",
+            "width": 570,
+            "height": 712,
+            "bytes": 54056
+          }
+        ]
+      },
+      "logo": {
+        "source": "school logo.png",
+        "outputs": [
+          {
+            "path": "assets/images/logo.png",
+            "width": 361,
+            "height": 512,
+            "bytes": 94168
+          },
+          {
+            "path": "assets/images/favicon.ico",
+            "sizes": "16/32/48",
+            "bytes": 4006
+          },
+          {
+            "path": "assets/images/favicon-16.png",
+            "width": 16,
+            "height": 16,
+            "bytes": 557
+          },
+          {
+            "path": "assets/images/favicon-32.png",
+            "width": 32,
+            "height": 32,
+            "bytes": 1290
+          },
+          {
+            "path": "assets/images/favicon.png",
+            "width": 180,
+            "height": 180,
+            "bytes": 17833
+          },
+          {
+            "path": "assets/images/icon-192.png",
+            "width": 192,
+            "height": 192,
+            "bytes": 19597
+          },
+          {
+            "path": "assets/images/icon-512.png",
+            "width": 512,
+            "height": 512,
+            "bytes": 79342
+          },
+          {
+            "path": "assets/images/apple-touch-icon.png",
+            "width": 180,
+            "height": 180,
+            "bytes": 12709
+          },
+          {
+            "path": "assets/images/icon-maskable.png",
+            "width": 512,
+            "height": 512,
+            "bytes": 69042
+          },
+          {
+            "path": "assets/images/og-image.png",
+            "width": 1200,
+            "height": 630,
+            "bytes": 109262
+          }
+        ]
+      }
+    },
+    "page-headers": [
+      {
+        "page": "about",
+        "source": "brightlingsea  staff picture.png",
+        "path": "assets/images/pages/about-header.jpg",
+        "width": 1430,
+        "height": 804,
+        "bytes": 233167
+      },
+      {
+        "page": "activities",
+        "source": "brightlingsea games.png",
+        "path": "assets/images/pages/activities-header.jpg",
+        "width": 1280,
+        "height": 720,
+        "bytes": 163611
+      },
+      {
+        "page": "campus",
+        "source": " brightlingsea ICT lab.png",
+        "path": "assets/images/pages/campus-header.jpg",
+        "width": 984,
+        "height": 554,
+        "bytes": 74667
+      },
+      {
+        "page": "contact",
+        "source": "brighlinsea academy classroom.png",
+        "path": "assets/images/pages/contact-header.jpg",
+        "width": 949,
+        "height": 534,
+        "bytes": 101631
+      },
+      {
+        "page": "departments",
+        "source": "brightlignsea class visits .png",
+        "path": "assets/images/pages/departments-header.jpg",
+        "width": 1430,
+        "height": 804,
+        "bytes": 188907
+      },
+      {
+        "page": "facilities",
+        "source": "brightlingsea school bridge project.png",
+        "path": "assets/images/pages/facilities-header.jpg",
+        "width": 1600,
+        "height": 900,
+        "bytes": 451227
+      },
+      {
+        "page": "gallery",
+        "source": "brightlingsea kakuum natiional park excursion.png",
+        "path": "assets/images/pages/gallery-header.jpg",
+        "width": 890,
+        "height": 501,
+        "bytes": 83515
+      },
+      {
+        "page": "news",
+        "source": "brightlingsea career day.png",
+        "path": "assets/images/pages/news-header.jpg",
+        "width": 1600,
+        "height": 900,
+        "bytes": 416471
+      },
+      {
+        "page": "staff",
+        "source": "brightlingsea  staff picture 1.png",
+        "path": "assets/images/pages/staff-header.jpg",
+        "width": 1430,
+        "height": 804,
+        "bytes": 300127
+      }
+    ]
+  },
+  "sources": [
+    {
+      "file": " brightlingsea ICT lab.png",
+      "bytes": 745098,
+      "md5": "819bc0d407444c65448ec60dd6671abf",
+      "width": 984,
+      "height": 656,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/ict-lab.jpg",
+          "width": 984,
+          "height": 656,
+          "bytes": 87636
+        }
+      ]
+    },
+    {
+      "file": "Brightlingsea career day 1.png",
+      "bytes": 10985335,
+      "md5": "c0e30de745679914319d5d226805aad8",
+      "width": 4096,
+      "height": 1840,
+      "category": "events",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/events/career-day-1.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 292779
+        }
+      ]
+    },
+    {
+      "file": "Brightlinsea academy medical examinations .png",
+      "bytes": 1990703,
+      "md5": "688473f8e235cfdd22907e9f5ac3d634",
+      "width": 1430,
+      "height": 1073,
+      "category": "health",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/health/medical-examinations.jpg",
+          "width": 1430,
+          "height": 1073,
+          "bytes": 198818
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 1.png",
+      "bytes": 2477044,
+      "md5": "d24293e0e3cc032423d7143184bc0f57",
+      "width": 1430,
+      "height": 1144,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-1.jpg",
+          "width": 1430,
+          "height": 1144,
+          "bytes": 328993
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 2.png",
+      "bytes": 1823036,
+      "md5": "4ac044ef1e92fdf2205cb657d4ef97c0",
+      "width": 1430,
+      "height": 953,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-2.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 229207
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 3.png",
+      "bytes": 2209350,
+      "md5": "16b01933f50a67cb8f1490c55b0c5781",
+      "width": 1430,
+      "height": 953,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-3.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 288978
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 4.png",
+      "bytes": 1813516,
+      "md5": "94f279fc49b97ed48e9fe71bbfb29c83",
+      "width": 1430,
+      "height": 1144,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-4.jpg",
+          "width": 1430,
+          "height": 1144,
+          "bytes": 190546
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 5.png",
+      "bytes": 1762476,
+      "md5": "7c52079877b3f38560ecbcc393c6bf66",
+      "width": 1430,
+      "height": 953,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-5.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 197998
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 6.png",
+      "bytes": 1915193,
+      "md5": "72597424168d007c8e88cfb5f000e6cb",
+      "width": 1001,
+      "height": 1502,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-6.jpg",
+          "width": 1001,
+          "height": 1502,
+          "bytes": 216227
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 8.png",
+      "bytes": 2904016,
+      "md5": "4e3e85603059ab541f69d9cfe69c3aac",
+      "width": 1201,
+      "height": 1502,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-8.jpg",
+          "width": 1201,
+          "height": 1502,
+          "bytes": 361786
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery 9.png",
+      "bytes": 906826,
+      "md5": "4473a260a4f61dd05332df5024411903",
+      "width": 628,
+      "height": 943,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery-9.jpg",
+          "width": 628,
+          "height": 943,
+          "bytes": 118064
+        }
+      ]
+    },
+    {
+      "file": "Childrensalon Team Gallery.png",
+      "bytes": 1898448,
+      "md5": "29fcd9fdd30e7a975cdc59a72c9dd8ec",
+      "width": 1430,
+      "height": 953,
+      "category": "childrensalon",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/childrensalon/childrensalon-team-gallery.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 226360
+        }
+      ]
+    },
+    {
+      "file": "PTA executive .png",
+      "bytes": 326675,
+      "md5": "b0b65c6f2545a3fa02abde7623889adc",
+      "width": 809,
+      "height": 1080,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/pta-executive.jpg",
+          "width": 809,
+          "height": 1080,
+          "bytes": 38374
+        }
+      ]
+    },
+    {
+      "file": "School side side view.png",
+      "bytes": 1203980,
+      "md5": "8c1ac3486b354a46fbde98d35f14ebb5",
+      "width": 922,
+      "height": 878,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/side-side-view.jpg",
+          "width": 922,
+          "height": 878,
+          "bytes": 132741
+        }
+      ]
+    },
+    {
+      "file": "Scool side-front view.png",
+      "bytes": 1015824,
+      "md5": "a9b46d819b9b108d3ecbca4c7576bf9b",
+      "width": 960,
+      "height": 837,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/side-front-view.jpg",
+          "width": 960,
+          "height": 837,
+          "bytes": 124778
+        }
+      ]
+    },
+    {
+      "file": "brighlinggsea school Monkey.png",
+      "bytes": 6133243,
+      "md5": "e82ec2a8f978b403f1db302c55c17da5",
+      "width": 1071,
+      "height": 1429,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/monkey.jpg",
+          "width": 1071,
+          "height": 1429,
+          "bytes": 256744
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea 7th anniversary.png",
+      "bytes": 686418,
+      "md5": "62cc084ab39993e8d60368fcad99709e",
+      "width": 852,
+      "height": 511,
+      "category": "posters",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/posters/7th-anniversary.jpg",
+          "width": 852,
+          "height": 511,
+          "bytes": 115714
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea 7th graduation .png",
+      "bytes": 833101,
+      "md5": "62cef9f98e61637f0fcc1f4d168985ff",
+      "width": 819,
+      "height": 546,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/7th-graduation.jpg",
+          "width": 819,
+          "height": 546,
+          "bytes": 130542
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea PTA meeting .png",
+      "bytes": 17927997,
+      "md5": "feb99d8f2ddd96f371adb4036c2b46b5",
+      "width": 8192,
+      "height": 3680,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/pta-meeting.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 180807
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea agriculture.png",
+      "bytes": 1564719,
+      "md5": "7846b358e86df4762365664d2186070e",
+      "width": 1280,
+      "height": 575,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/agriculture.jpg",
+          "width": 1280,
+          "height": 575,
+          "bytes": 213370
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea antwi agyei house.png",
+      "bytes": 1810386,
+      "md5": "358e9631fb7e0091bb86dfdffd8883de",
+      "width": 1215,
+      "height": 838,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/antwi-agyei-house.jpg",
+          "width": 1215,
+          "height": 838,
+          "bytes": 256724
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea beatrice boadi house.png",
+      "bytes": 1408412,
+      "md5": "94b8c837faae201242656db0d3280e1f",
+      "width": 1025,
+      "height": 769,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/beatrice-boadi-house.jpg",
+          "width": 1025,
+          "height": 769,
+          "bytes": 215576
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea career day.png",
+      "bytes": 9508926,
+      "md5": "ed6205e0d2d83e2489637778d5d7419f",
+      "width": 4096,
+      "height": 1840,
+      "category": "events",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/events/career-day.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 273578
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea escurion.png",
+      "bytes": 2364593,
+      "md5": "ad695abc13cafd8694111cce0860e3b7",
+      "width": 1200,
+      "height": 1600,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion.jpg",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 279531
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea escursion .png",
+      "bytes": 1233933,
+      "md5": "028f9014f9a62a92ab38b430d169212f",
+      "width": 765,
+      "height": 1020,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-2.jpg",
+          "width": 765,
+          "height": 1020,
+          "bytes": 145944
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea escursion.png",
+      "bytes": 876112,
+      "md5": "a6c041c6fbc68673177c00e44efda7a1",
+      "width": 1080,
+      "height": 810,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-3.jpg",
+          "width": 1080,
+          "height": 810,
+          "bytes": 109866
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea games 1.png",
+      "bytes": 1786851,
+      "md5": "7ea60c0c80914184a60641c939ef6d51",
+      "width": 1280,
+      "height": 960,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/games-1.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 225606
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea games.png",
+      "bytes": 1873828,
+      "md5": "52a38ada15e656e02fd7ae68fc5baa78",
+      "width": 1280,
+      "height": 960,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/games.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 236898
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea graduation 7.png",
+      "bytes": 1155391,
+      "md5": "6484e05260da161cc7a11a735cd7d07a",
+      "width": 1072,
+      "height": 712,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-7.jpg",
+          "width": 1072,
+          "height": 712,
+          "bytes": 140588
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea graduation.png",
+      "bytes": 1102947,
+      "md5": "5816cbceeae14d340a929d3e9d0db231",
+      "width": 1072,
+      "height": 712,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation.jpg",
+          "width": 1072,
+          "height": 712,
+          "bytes": 131042
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea headmaster's picture.png",
+      "bytes": 774929,
+      "md5": "8b9c3e4b9438a17b4a7797ad6b573f71",
+      "width": 1072,
+      "height": 712,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/headmaster.jpg",
+          "width": 1072,
+          "height": 712,
+          "bytes": 88819
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea school brigde project almost complete.png",
+      "bytes": 7094855,
+      "md5": "4a5f4dbab41abc27b5240dade5ca245f",
+      "width": 1840,
+      "height": 4096,
+      "category": "projects",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/projects/bridge-project-almost-complete.jpg",
+          "width": 719,
+          "height": 1600,
+          "bytes": 228696
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea school house intercompetitions .png",
+      "bytes": 6785180,
+      "md5": "768daeba1b35c1ddab7d75329f8ad243",
+      "width": 4096,
+      "height": 1840,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/house-intercompetitions.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 159813
+        }
+      ]
+    },
+    {
+      "file": "brighlingsea school house intercompetitions 1.png",
+      "bytes": 5785088,
+      "md5": "6086a7802a7247b1fcbb9bb8f090c15d",
+      "width": 4096,
+      "height": 1840,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/house-intercompetitions-1.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 163371
+        }
+      ]
+    },
+    {
+      "file": "brighlinsea academy classroom.png",
+      "bytes": 1080185,
+      "md5": "376ef60f6dec6e15b016273c4d429c77",
+      "width": 949,
+      "height": 711,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/classroom.jpg",
+          "width": 949,
+          "height": 711,
+          "bytes": 132577
+        }
+      ]
+    },
+    {
+      "file": "brighlinsea bording house.png",
+      "bytes": 1183698,
+      "md5": "f290adb1e7031f25e5da396a26dcf6c2",
+      "width": 1280,
+      "height": 960,
+      "category": "boarding",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/boarding/boarding-house.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 170787
+        }
+      ]
+    },
+    {
+      "file": "brightlignsea class visits .png",
+      "bytes": 1832639,
+      "md5": "5c0b2efda08bc496459c0514e290c7d8",
+      "width": 1430,
+      "height": 953,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/class-visits.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 227285
+        }
+      ]
+    },
+    {
+      "file": "brightlinggsea PTA meeting .png",
+      "bytes": 20931268,
+      "md5": "d3813b082914b0a8f50f1a6b9974b029",
+      "width": 8192,
+      "height": 3680,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/pta-meeting-2.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 188409
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea  foreign staff.png",
+      "bytes": 2175080,
+      "md5": "353a3fbd66e71515cfc33d75bcac97b7",
+      "width": 1430,
+      "height": 953,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/foreign-staff.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 284506
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea  graduation .png",
+      "bytes": 2017846,
+      "md5": "b6c9d451abe707592154bdb4c9c75feb",
+      "width": 1430,
+      "height": 953,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-2.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 256082
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea  staff picture 1.png",
+      "bytes": 2598003,
+      "md5": "e428324209fbaa760e8dbeee436d68fc",
+      "width": 1430,
+      "height": 953,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/staff-1.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 353946
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea  staff picture.png",
+      "bytes": 2055667,
+      "md5": "06b48c52325334df41d2c51b4f5e5d7e",
+      "width": 1430,
+      "height": 953,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/staff.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 268463
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea  steve william house .png",
+      "bytes": 1461688,
+      "md5": "8153750b281c3a52ffca18c76536efff",
+      "width": 1082,
+      "height": 697,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/steve-william-house.jpg",
+          "width": 1082,
+          "height": 697,
+          "bytes": 218172
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea 10th anniversary .png",
+      "bytes": 445428,
+      "md5": "3eaec26a7eabd4d9fbc83409e3774127",
+      "width": 636,
+      "height": 424,
+      "category": "posters",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/posters/10th-anniversary.jpg",
+          "width": 636,
+          "height": 424,
+          "bytes": 87493
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea academy when it was being built.png",
+      "bytes": 578528,
+      "md5": "feee6bd3c6dcbda7507f538f8b4f514f",
+      "width": 688,
+      "height": 516,
+      "category": "projects",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/projects/when-it-was-being-built.jpg",
+          "width": 688,
+          "height": 516,
+          "bytes": 74376
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea airforce cadet .png",
+      "bytes": 1927479,
+      "md5": "cb54c5ef7c572df9676ac8d2b344738e",
+      "width": 1430,
+      "height": 953,
+      "category": "activities",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/activities/airforce-cadet.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 232389
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea airforce cadet 1.png",
+      "bytes": 1774599,
+      "md5": "c1afe73b1c8b7562e76c23673995c694",
+      "width": 1430,
+      "height": 953,
+      "category": "activities",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/activities/airforce-cadet-1.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 209903
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea airforce cadet 2.png",
+      "bytes": 2371834,
+      "md5": "209eb065a8734fae727b0bacc36fd749",
+      "width": 1430,
+      "height": 953,
+      "category": "activities",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/activities/airforce-cadet-2.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 327896
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea airforce cadet 3.png",
+      "bytes": 2205133,
+      "md5": "98060436624721dab8ed57197057f9b4",
+      "width": 1430,
+      "height": 953,
+      "category": "activities",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/activities/airforce-cadet-3.jpg",
+          "width": 1430,
+          "height": 953,
+          "bytes": 286107
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea bosomtwe escurion.png",
+      "bytes": 1188907,
+      "md5": "8b6e27f74c6f01658b0a12ad02586422",
+      "width": 898,
+      "height": 673,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/bosomtwe-excursion.jpg",
+          "width": 898,
+          "height": 673,
+          "bytes": 176577
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea bosomtwe escursion 3.png",
+      "bytes": 971609,
+      "md5": "60ae7962b223b759ca1bfc8f17f6a134",
+      "width": 1024,
+      "height": 768,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/bosomtwe-excursion-3.jpg",
+          "width": 1024,
+          "height": 768,
+          "bytes": 120902
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea bosomtwe escursion.png",
+      "bytes": 971609,
+      "md5": "60ae7962b223b759ca1bfc8f17f6a134",
+      "width": 1024,
+      "height": 768,
+      "category": "excursions",
+      "status": "duplicate",
+      "reason": "md5 identical",
+      "duplicate_of": "brightlingsea bosomtwe escursion 3.png"
+    },
+    {
+      "file": "brightlingsea bridge project.png",
+      "bytes": 3680264,
+      "md5": "a5cea7318f866dcf9cc21cb4ed8d3fb6",
+      "width": 643,
+      "height": 1428,
+      "category": "projects",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/projects/bridge-project.jpg",
+          "width": 643,
+          "height": 1428,
+          "bytes": 264421
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea career day banner .png",
+      "bytes": 818070,
+      "md5": "668b30e1ff5ab32c19c159e204e621e7",
+      "width": 1080,
+      "height": 516,
+      "category": "posters",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/posters/career-day-banner.jpg",
+          "width": 1080,
+          "height": 516,
+          "bytes": 146469
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea career day.png",
+      "bytes": 12071579,
+      "md5": "dc6e35facf9c00733d82b32116530b96",
+      "width": 4096,
+      "height": 1840,
+      "category": "events",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/events/career-day-2.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 318075
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea escursion 2.png",
+      "bytes": 1423865,
+      "md5": "25a251e791a47ae204c628828d7d06b8",
+      "width": 1080,
+      "height": 810,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-2-2.jpg",
+          "width": 1080,
+          "height": 810,
+          "bytes": 176894
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea escursion 5.png",
+      "bytes": 1707615,
+      "md5": "9a2f8696e6aae7fcb8be42d4dd16440b",
+      "width": 1200,
+      "height": 1600,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-5.jpg",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 172602
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea escursion bosomtwe.png",
+      "bytes": 867817,
+      "md5": "8122381a067443b7e2d5b0e3b569940c",
+      "width": 603,
+      "height": 804,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-bosomtwe.jpg",
+          "width": 603,
+          "height": 804,
+          "bytes": 123928
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea escursion.png",
+      "bytes": 1754731,
+      "md5": "ae2b5bc31b2dabad733c979ee41f124c",
+      "width": 1080,
+      "height": 810,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-4.jpg",
+          "width": 1080,
+          "height": 810,
+          "bytes": 232057
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea excursion.png",
+      "bytes": 515353,
+      "md5": "f572c5697794c3d6a2d27299ee0bb0e5",
+      "width": 528,
+      "height": 704,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-6.jpg",
+          "width": 528,
+          "height": 704,
+          "bytes": 62180
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea games .png",
+      "bytes": 1463293,
+      "md5": "9fab77d67579da344de4528d5848c661",
+      "width": 1280,
+      "height": 960,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/games-2.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 177366
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea games.png",
+      "bytes": 1653452,
+      "md5": "fe942d24f8582c87e6e5af87444f98fd",
+      "width": 1280,
+      "height": 960,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/games-3.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 191912
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation .png",
+      "bytes": 1997044,
+      "md5": "4a8095b989e698ebbe1a05d55d00f7bc",
+      "width": 1001,
+      "height": 1502,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-3.jpg",
+          "width": 1001,
+          "height": 1502,
+          "bytes": 236852
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation 1.png",
+      "bytes": 2243151,
+      "md5": "0ec6c563e2b81ccf35542528ddf9fb4d",
+      "width": 1430,
+      "height": 1144,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-1.jpg",
+          "width": 1430,
+          "height": 1144,
+          "bytes": 277671
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation 2.png",
+      "bytes": 1179036,
+      "md5": "171a8f5627ef892c6f0fdc3d7ef79148",
+      "width": 667,
+      "height": 1001,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-2-2.jpg",
+          "width": 667,
+          "height": 1001,
+          "bytes": 164402
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation 3.png",
+      "bytes": 736717,
+      "md5": "6d72f66b9845122ddce469b5ca6e3316",
+      "width": 540,
+      "height": 809,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-3-2.jpg",
+          "width": 540,
+          "height": 809,
+          "bytes": 104611
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation 6.png",
+      "bytes": 1208145,
+      "md5": "fb0c4e914949e6e4a7e39e3c2880c389",
+      "width": 1072,
+      "height": 712,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-6.jpg",
+          "width": 1072,
+          "height": 712,
+          "bytes": 148506
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation 7.png",
+      "bytes": 957735,
+      "md5": "6f6cd0fd6da0cff286677be17bbf781e",
+      "width": 1072,
+      "height": 712,
+      "category": "graduation",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/graduation/graduation-7-2.jpg",
+          "width": 1072,
+          "height": 712,
+          "bytes": 117306
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea graduation.png",
+      "bytes": 957735,
+      "md5": "6f6cd0fd6da0cff286677be17bbf781e",
+      "width": 1072,
+      "height": 712,
+      "category": "graduation",
+      "status": "duplicate",
+      "reason": "md5 identical",
+      "duplicate_of": "brightlingsea graduation 7.png"
+    },
+    {
+      "file": "brightlingsea headmaster.png",
+      "bytes": 1674027,
+      "md5": "378e1353bdf0e5391d77facc9a6b24b1",
+      "width": 1001,
+      "height": 1502,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/headmaster-2.jpg",
+          "width": 1001,
+          "height": 1502,
+          "bytes": 191857
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea independence day 6th march \\.png",
+      "bytes": 1690341,
+      "md5": "829a449a5cc98a552febeb3662b188b9",
+      "width": 1430,
+      "height": 643,
+      "category": "national-events",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/national-events/independence-day-6th-march.jpg",
+          "width": 1430,
+          "height": 643,
+          "bytes": 226748
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea independence day 6th martch .png",
+      "bytes": 1491203,
+      "md5": "97bd431e628699c6e8f7e14773607266",
+      "width": 1430,
+      "height": 643,
+      "category": "national-events",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/national-events/independence-day-6th-march-2.jpg",
+          "width": 1430,
+          "height": 643,
+          "bytes": 198333
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea jemma collins house .png",
+      "bytes": 1456355,
+      "md5": "52b237fe0eff33c30d0adb723ad7f5fd",
+      "width": 1131,
+      "height": 724,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/jemma-collins-house.jpg",
+          "width": 1131,
+          "height": 724,
+          "bytes": 226724
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kakuum natiional park excursion.png",
+      "bytes": 2527029,
+      "md5": "b7b1d93bdcb95342321c5e4baa974ad2",
+      "width": 890,
+      "height": 1980,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/kakuum-national-park-excursion.jpg",
+          "width": 719,
+          "height": 1600,
+          "bytes": 229854
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kakuum national park escursion 1.png",
+      "bytes": 3107467,
+      "md5": "37829b6f131ddde0eef76d6e6a631a13",
+      "width": 890,
+      "height": 1980,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/kakuum-national-park-excursion-1.jpg",
+          "width": 719,
+          "height": 1600,
+          "bytes": 290865
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kakuum national park escursion 2.png",
+      "bytes": 8210279,
+      "md5": "31d906cd96cd9476422405aebe78c6f9",
+      "width": 4096,
+      "height": 1840,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/kakuum-national-park-excursion-2.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 230718
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kakuum national park escursion.png",
+      "bytes": 11804482,
+      "md5": "febc58f5d13476b72423ad6faf977c28",
+      "width": 1840,
+      "height": 4096,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/kakuum-national-park-excursion-3.jpg",
+          "width": 719,
+          "height": 1600,
+          "bytes": 352872
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kakuyum national park escursion.png",
+      "bytes": 10501332,
+      "md5": "53140a74d8033ba61366e4931e54b4b5",
+      "width": 1840,
+      "height": 4096,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/kakuyum-national-park-excursion.jpg",
+          "width": 719,
+          "height": 1600,
+          "bytes": 301958
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kids resting .png",
+      "bytes": 1992343,
+      "md5": "34226a7b412451ee498f96c2474292d5",
+      "width": 1430,
+      "height": 1073,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-resting.jpg",
+          "width": 1430,
+          "height": 1073,
+          "bytes": 207174
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea kumasi zoo escursion.png",
+      "bytes": 1521676,
+      "md5": "7527815c38804680b20ba6ad430f73eb",
+      "width": 720,
+      "height": 1280,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/kumasi-zoo-excursion.jpg",
+          "width": 720,
+          "height": 1280,
+          "bytes": 190171
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea lake bosomtwe escursion.png",
+      "bytes": 966209,
+      "md5": "7dc8db1f235d4cf3646b5421207ab6a4",
+      "width": 769,
+      "height": 1024,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/lake-bosomtwe-excursion.jpg",
+          "width": 769,
+          "height": 1024,
+          "bytes": 115024
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea school bridge project .png",
+      "bytes": 10095628,
+      "md5": "4aa52f8280c64610ccb4ad0a7f009c40",
+      "width": 1840,
+      "height": 4096,
+      "category": "projects",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/projects/bridge-project-2.jpg",
+          "width": 719,
+          "height": 1600,
+          "bytes": 291046
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea school bridge project.png",
+      "bytes": 13102267,
+      "md5": "4baecb00b5a1c9dd9852c4a6541ba640",
+      "width": 4096,
+      "height": 1840,
+      "category": "projects",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/projects/bridge-project-3.jpg",
+          "width": 1600,
+          "height": 719,
+          "bytes": 387409
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea serwah akoto house.png",
+      "bytes": 1690373,
+      "md5": "b7a95df8543bea0668dbfd4553c6e3af",
+      "width": 1217,
+      "height": 729,
+      "category": "houses",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/houses/serwah-akoto-house.jpg",
+          "width": 1217,
+          "height": 729,
+          "bytes": 251344
+        }
+      ]
+    },
+    {
+      "file": "brightlingsea when it was being built .png",
+      "bytes": 555844,
+      "md5": "363a58db2bd08007ba040d71c2d99c2d",
+      "width": 760,
+      "height": 569,
+      "category": "projects",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/projects/when-it-was-being-built-2.jpg",
+          "width": 760,
+          "height": 569,
+          "bytes": 68681
+        }
+      ]
+    },
+    {
+      "file": "brightlingseaa agriculture .png",
+      "bytes": 1703149,
+      "md5": "3e42f5b5f25e83039897a3596cb27e42",
+      "width": 1016,
+      "height": 762,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/agriculture-2.jpg",
+          "width": 1016,
+          "height": 762,
+          "bytes": 219048
+        }
+      ]
+    },
+    {
+      "file": "brightlingseaa games.png",
+      "bytes": 932611,
+      "md5": "529d48fbfa24f2403af6508619b3e9e2",
+      "width": 1280,
+      "height": 575,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/games-4.jpg",
+          "width": 1280,
+          "height": 575,
+          "bytes": 118581
+        }
+      ]
+    },
+    {
+      "file": "brightlinsea escursion 4.png",
+      "bytes": 3676917,
+      "md5": "e6d8452ea5542bbc12a97522e45e3714",
+      "width": 1200,
+      "height": 1600,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-4-2.jpg",
+          "width": 1200,
+          "height": 1600,
+          "bytes": 500133
+        }
+      ]
+    },
+    {
+      "file": "brightlinsea escursion.png",
+      "bytes": 1291279,
+      "md5": "62b6008328a5e9a984564c7ba7ada0b4",
+      "width": 765,
+      "height": 1020,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-7.jpg",
+          "width": 765,
+          "height": 1020,
+          "bytes": 150884
+        }
+      ]
+    },
+    {
+      "file": "brightlinsea escurtion.png",
+      "bytes": 1251129,
+      "md5": "479c34837d2e059fcdce9b7688b2392f",
+      "width": 765,
+      "height": 1020,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-8.jpg",
+          "width": 765,
+          "height": 1020,
+          "bytes": 149617
+        }
+      ]
+    },
+    {
+      "file": "brightlinsea games.png",
+      "bytes": 1793954,
+      "md5": "881f36bc916117523fbb66a6a1ed5946",
+      "width": 1280,
+      "height": 960,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/games-5.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 215461
+        }
+      ]
+    },
+    {
+      "file": "briightlingsea academy medical examinaton.png",
+      "bytes": 1977561,
+      "md5": "563c468faa02344236c5671c2d262953",
+      "width": 1430,
+      "height": 1073,
+      "category": "health",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/health/medical-examinaton.jpg",
+          "width": 1430,
+          "height": 1073,
+          "bytes": 194058
+        }
+      ]
+    },
+    {
+      "file": "brrighlingsea escursion.png",
+      "bytes": 1918092,
+      "md5": "923788a6ddd6b80e03b0b562960dadc3",
+      "width": 900,
+      "height": 1600,
+      "category": "excursions",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/excursions/excursion-9.jpg",
+          "width": 900,
+          "height": 1600,
+          "bytes": 222574
+        }
+      ]
+    },
+    {
+      "file": "headmaster and his wife's picture.png",
+      "bytes": 1530059,
+      "md5": "0e130c8115112168d324db857fbc768e",
+      "width": 1175,
+      "height": 784,
+      "category": "staff",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/staff/headmaster-and-his-wife.jpg",
+          "width": 1175,
+          "height": 784,
+          "bytes": 191537
+        }
+      ]
+    },
+    {
+      "file": "kids eating. png",
+      "bytes": 113180,
+      "md5": "a499622ab1a6e73755c9c9d8f2ab0327",
+      "width": 900,
+      "height": 729,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-eating.jpg",
+          "width": 900,
+          "height": 729,
+          "bytes": 111375
+        }
+      ]
+    },
+    {
+      "file": "kids eating.png ",
+      "bytes": 78360,
+      "md5": "9a54faf41532df24982a52540e4313b7",
+      "width": 900,
+      "height": 600,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-eating-2.jpg",
+          "width": 900,
+          "height": 600,
+          "bytes": 77818
+        }
+      ]
+    },
+    {
+      "file": "kids in class happy.png",
+      "bytes": 76037,
+      "md5": "2bea9f4c640846ae4b9f1c979955b1ab",
+      "width": 900,
+      "height": 553,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-in-class-happy.jpg",
+          "width": 900,
+          "height": 553,
+          "bytes": 74759
+        }
+      ]
+    },
+    {
+      "file": "kids in class.png",
+      "bytes": 71904,
+      "md5": "347ab7409f053e9951508a1ce7697d62",
+      "width": 900,
+      "height": 552,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-in-class.jpg",
+          "width": 900,
+          "height": 552,
+          "bytes": 71506
+        }
+      ]
+    },
+    {
+      "file": "kids learning in class 1.png",
+      "bytes": 60001,
+      "md5": "3c33e618e3595cf8c24088a810b981e4",
+      "width": 900,
+      "height": 600,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-learning-in-class-1.jpg",
+          "width": 900,
+          "height": 600,
+          "bytes": 59176
+        }
+      ]
+    },
+    {
+      "file": "kids learning in class.png",
+      "bytes": 35410,
+      "md5": "ef0e265f774073034653a90bc570e341",
+      "width": 700,
+      "height": 410,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids-learning-in-class.jpg",
+          "width": 700,
+          "height": 410,
+          "bytes": 44653
+        }
+      ]
+    },
+    {
+      "file": "kids playing on school compound.png",
+      "bytes": 147964,
+      "md5": "5cd4a04b109d06cf6c3139a6000d6fcb",
+      "width": 274,
+      "height": 366,
+      "category": "sports",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/sports/kids-playing-on-compound.jpg",
+          "width": 274,
+          "height": 366,
+          "bytes": 20044
+        }
+      ]
+    },
+    {
+      "file": "kids.png",
+      "bytes": 329717,
+      "md5": "3638a3eb2ca47e8954473143ccf8452b",
+      "width": 414,
+      "height": 525,
+      "category": "campus",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/campus/kids.jpg",
+          "width": 414,
+          "height": 525,
+          "bytes": 38783
+        }
+      ]
+    },
+    {
+      "file": "school front side view 1.png",
+      "bytes": 1012707,
+      "md5": "3380c4209bd63145efe50c2b2ce4c5ba",
+      "width": 962,
+      "height": 887,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/front-side-view-1.jpg",
+          "width": 962,
+          "height": 887,
+          "bytes": 119445
+        }
+      ]
+    },
+    {
+      "file": "school front side view.png",
+      "bytes": 1131995,
+      "md5": "6c3f4db9eb5f4d686734b0d17fd6aa31",
+      "width": 964,
+      "height": 910,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/front-side-view.jpg",
+          "width": 964,
+          "height": 910,
+          "bytes": 134685
+        }
+      ]
+    },
+    {
+      "file": "school logo.png",
+      "bytes": 374862,
+      "md5": "1c9359749293c36c748621de58ade909",
+      "width": 1282,
+      "height": 1819,
+      "category": "branding",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/branding/logo.jpg",
+          "width": 1128,
+          "height": 1600,
+          "bytes": 127156
+        }
+      ]
+    },
+    {
+      "file": "school side side view 1.png",
+      "bytes": 1184202,
+      "md5": "a9aac2b3e62df50e0d3696b5aeb1a874",
+      "width": 957,
+      "height": 882,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/side-side-view-1.jpg",
+          "width": 957,
+          "height": 882,
+          "bytes": 120942
+        }
+      ]
+    },
+    {
+      "file": "school view .png",
+      "bytes": 34916,
+      "md5": "c10ae3d934bd522fd97ff9b0e6e65dc2",
+      "width": 287,
+      "height": 510,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/view.jpg",
+          "width": 287,
+          "height": 510,
+          "bytes": 36812
+        }
+      ]
+    },
+    {
+      "file": "schoolfront view.png",
+      "bytes": 37564,
+      "md5": "df6e13162ea8ddda40e666fc2492a3e5",
+      "width": 680,
+      "height": 382,
+      "category": "views",
+      "status": "kept",
+      "outputs": [
+        {
+          "path": "assets/images/gallery/views/schoolfront-view.jpg",
+          "width": 680,
+          "height": 382,
+          "bytes": 37472
+        }
+      ]
+    },
+    {
+      "file": "School-Feeding-Video.mp4",
+      "status": "excluded",
+      "reason": "not an image"
+    },
+    {
+      "file": "this contains most of the school data that we will use .docx",
+      "status": "excluded",
+      "reason": "not an image"
+    }
+  ]
+}
