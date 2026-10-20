@@ -3,7 +3,7 @@
    Scoped to .fac-wrap so nothing leaks into other pages.
    ========================================================================== */
 
-.fac-wrap { background: linear-gradient(180deg, #0056A3 0%, #003D7A 100%); }
+.fac-wrap { background: linear-gradient(180deg, var(--orange) 0%, #E85D2F 100%); }
 
 .fac-section { padding: 56px 0; }
 .fac-section.alt { background: rgba(255,255,255,0.08); }
@@ -54,7 +54,7 @@
 .fac-card-body p { color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px; }
 .fac-specs { list-style: none; padding: 0; margin: auto 0 0; display: grid; gap: 6px; }
 .fac-specs li { font-size: 0.82rem; color: var(--text-light); display: flex; gap: 8px; align-items: center; }
-.fac-specs i { color: var(--blue); font-size: 0.7rem; }
+.fac-specs i { color: var(--orange); font-size: 0.7rem; }
 
 /* ---- stats strip ---- */
 .fac-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 40px; }
@@ -63,7 +63,7 @@
     border-radius: var(--radius-md); padding: 22px 12px; text-align: center;
     box-shadow: var(--shadow-sm);
 }
-.fac-stat i { font-size: 1.6rem; color: var(--blue); margin-bottom: 8px; }
+.fac-stat i { font-size: 1.6rem; color: var(--orange); margin-bottom: 8px; }
 .fac-stat .num { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--text-dark); }
 .fac-stat .lbl { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
 
@@ -79,7 +79,7 @@
 .fac-progress { height: 18px; background: var(--bg-lighter); border-radius: 999px; overflow: hidden; margin: 12px 0 6px; }
 .fac-progress-bar {
     height: 100%; border-radius: 999px;
-    background: linear-gradient(90deg, var(--blue), var(--orange));
+    background: linear-gradient(90deg, var(--orange), var(--orange));
     width: 0; transition: width 1.2s ease;
 }
 .fac-progress-label { font-size: 0.85rem; color: var(--text-gray); }
@@ -95,14 +95,14 @@
     border-radius: 50%; background: var(--bg-lighter); border: 3px solid var(--white);
     box-shadow: 0 0 0 2px var(--bg-lighter);
 }
-.fac-phase.done::before { background: var(--blue); box-shadow: 0 0 0 2px var(--blue); }
+.fac-phase.done::before { background: var(--orange); box-shadow: 0 0 0 2px var(--orange); }
 .fac-phase.active::before { background: var(--orange); box-shadow: 0 0 0 2px var(--orange); animation: fac-pulse 1.6s infinite; }
 @keyframes fac-pulse { 0%,100% { transform: scale(1);} 50% { transform: scale(1.35);} }
 .fac-phase-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
 .fac-phase-head h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--text-dark); }
 .fac-badge { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
              padding: 3px 10px; border-radius: 999px; background: var(--bg-lighter); color: var(--text-light); }
-.fac-phase.done .fac-badge { background: #0056A320; color: var(--blue); }
+.fac-phase.done .fac-badge { background: #FF6B3520; color: var(--orange); }
 .fac-phase.active .fac-badge { background: #FF6B3520; color: var(--orange); }
 .fac-phase .period { font-size: 0.82rem; color: var(--text-light); }
 .fac-phase p { font-size: 0.9rem; color: var(--text-gray); margin-top: 6px; }
@@ -117,7 +117,7 @@
     flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
     font-size: 1.1rem; color: var(--white);
-    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    background: linear-gradient(135deg, var(--orange) 0%, var(--blue-dark) 100%);
     box-shadow: var(--shadow-sm);
 }
 .fac-phase-group-title { font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-dark); line-height: 1.3; }
@@ -175,7 +175,7 @@ body.dark-mode .fac-summary { background: rgba(255, 255, 255, 0.06); border-colo
 
 /* ---- donate callout ---- */
 .fac-donate {
-    background: linear-gradient(135deg, var(--blue), #003D7A); color: #fff;
+    background: linear-gradient(135deg, var(--orange), #E85D2F); color: #fff;
     border-radius: var(--radius-lg); padding: 36px; text-align: center; margin-top: 36px;
 }
 .fac-donate h2 { font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 8px; }
@@ -187,7 +187,7 @@ body.dark-mode .fac-summary { background: rgba(255, 255, 255, 0.06); border-colo
 .fac-countdown { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 20px 0 4px; }
 .fac-count-box { background: var(--white); border: 1px solid var(--bg-lighter); border-radius: var(--radius-md);
                  min-width: 86px; padding: 14px 10px; text-align: center; box-shadow: var(--shadow-sm); }
-.fac-count-box strong { display: block; font-family: var(--font-heading); font-size: 1.7rem; color: var(--blue); }
+.fac-count-box strong { display: block; font-family: var(--font-heading); font-size: 1.7rem; color: var(--orange); }
 .fac-count-box span { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-light); }
 
 /* ---- dark mode ---- */
