@@ -760,8 +760,10 @@ ul {
 /* ========== HERO SECTION ========== */
 .hero {
     position: relative;
-    /* Enlarged welcome section: taller than the viewport so the full
-       background photo has room to breathe above and below the copy. */
+    /* The home page hero now uses a fully transparent background so the
+       fixed background photo (page-fixed-bg / hero-class.jpg) shows through
+       unobstructed. The orange default band is removed. */
+    background: transparent;
     min-height: 130vh;
     display: flex;
     flex-direction: column;
