@@ -760,9 +760,9 @@ ul {
 /* ========== HERO SECTION ========== */
 .hero {
     position: relative;
-    /* The home page hero now uses a fully transparent background so the
-       fixed background photo (page-fixed-bg / hero-class.jpg) shows through
-       unobstructed. The orange default band is removed. */
+    /* The home page hero now renders fully transparent so the
+       fixed background photo (page-fixed-bg / hero-class.jpg) shows
+       through unobstructed. No blue band, scrim, or overlay. */
     background: transparent;
     min-height: 130vh;
     display: flex;
@@ -2409,11 +2409,11 @@ body:not(.dark-mode) .events-preview .event-card {
 }
 
 /* ========== SECTION PICKER ==========
-   Blue band (same family as .cta-bg) instead of a white strip, so the
-   homepage reads blue-dominant from the hero downwards. */
+   Transparent on the fixed photo; blue is preserved only for
+   deliberate picker buttons (.picker-blue / .picker-blue-dark). */
 .section-picker {
     padding: 48px 0 8px;
-    background: var(--band-blue);
+    background: transparent;
 }
 .picker-row {
     display: flex;
@@ -2458,10 +2458,11 @@ body:not(.dark-mode) .events-preview .event-card {
 }
 
 /* ========== HOME INTRO ==========
-   Deep-blue band + white copy (was a white strip with navy text). */
+   Transparent on the fixed photo; blue copy keeps readable brand
+   contrast against the hero. */
 .home-intro {
     padding: 56px 0 24px;
-    background: var(--band-blue);
+    background: transparent;
     text-align: center;
 }
 .intro-headline {
@@ -2482,12 +2483,11 @@ body:not(.dark-mode) .events-preview .event-card {
 .intro-copy + .intro-copy { margin-top: 14px; }
 
 /* ========== WELCOME BLOCK ==========
-   Blue-family band (was a warm cream/orange wash). The headmaster's welcome
-   is white-on-blue so it stays legible in both themes; orange survives only
-   as the section-heading rule line. */
+   Transparent on the fixed photo; blue is preserved only for
+   deliberate control accents, not the whole welcome parent. */
 .welcome-block {
     padding: 48px 0 64px;
-    background: var(--band-blue);
+    background: transparent;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -2800,16 +2800,18 @@ html body .page-hero-anniversary::before {
 /*  scrim with light text. This also fixes the current dark-mode gap  */
 /*  where light nav text sat on the white bar.)                        */
 html body .site-header {
-    background: linear-gradient(180deg, rgba(6, 18, 34, 0.72) 0%, rgba(6, 18, 34, 0.52) 100%) !important;
-    backdrop-filter: blur(14px) saturate(1.15);
-    -webkit-backdrop-filter: blur(14px) saturate(1.15);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.14), 0 8px 28px rgba(4, 12, 24, 0.28) !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 28px rgba(4, 12, 24, 0.30) !important;
     border: none;
 }
+
 html body .brand-name {
     color: #FFFFFF !important;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
+
 html body .brand-tagline {
     color: rgba(255, 255, 255, 0.78) !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
