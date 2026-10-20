@@ -1137,7 +1137,7 @@ ul {
 /* ========== QUICK LINKS SECTION ========== */
 .quick-links-section {
     padding: 60px 0;
-    background: var(--blue-dark);
+    background: transparent;
 }
 
 .quick-links-grid {
@@ -1297,7 +1297,7 @@ ul {
    never be used here). */
 .about-preview {
     padding: 80px 0;
-    background: var(--band-blue);
+    background: transparent;
     --accent-ink: var(--accent-ink-dark);
 }
 
@@ -1456,7 +1456,7 @@ ul {
    The cards keep their own (theme-aware) surfaces. */
 .why-choose {
     padding: 80px 0;
-    background: var(--band-blue);
+    background: transparent;
     --accent-ink: var(--accent-ink-dark);
 }
 
@@ -1612,7 +1612,7 @@ ul {
     padding: 80px 0;
     position: relative;
     overflow: hidden;
-    background: var(--band-blue);
+    background: transparent;
     /* Accent text on this band uses the bright brand orange. */
     --accent-ink: var(--accent-ink-dark);
 }
@@ -1759,7 +1759,7 @@ body:not(.dark-mode) .events-preview .event-card {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    background: var(--band-blue);
+    background: transparent;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
@@ -2505,7 +2505,7 @@ body:not(.dark-mode) .events-preview .event-card {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     aspect-ratio: 4 / 5;
-    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2680,7 +2680,7 @@ body:not(.dark-mode) .events-preview .event-card {
 
 /* The tagline/motto panel sits on the band, so the band owns the surface. */
 .home-intro {
-    background: var(--band-blue);
+    background: transparent;
     padding: 48px 0 40px;
 }
 
@@ -2745,7 +2745,7 @@ body:not(.dark-mode) .events-preview .event-card {
     overflow: hidden;
     pointer-events: none;
     /* Fallback while the photo loads (also survives img onerror removal) */
-    background: linear-gradient(160deg, #0A2540 0%, #00305B 55%, #0A2540 100%);
+    background: transparent;
 }
 .page-fixed-bg img {
     width: 100%;
@@ -2759,15 +2759,15 @@ body:not(.dark-mode) .events-preview .event-card {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(6, 20, 38, 0.40) 0%, rgba(6, 20, 38, 0.55) 100%);
+    background: transparent;
 }
 html body.dark-mode .page-fixed-bg::after {
-    background: linear-gradient(180deg, rgba(4, 12, 24, 0.58) 0%, rgba(4, 12, 24, 0.68) 100%);
+    background: transparent;
 }
 
 /* Canvas fallback colour behind the photo (overscroll / huge screens) */
 html body.home-page {
-    background-color: #0A2540 !important;
+    background-color: transparent !important;
 }
 
 /* --- Page heroes: drop their own scrolling photo copies so the fixed --- */
