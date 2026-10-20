@@ -1,17 +1,9 @@
 {
   "version": 2,
-  "framework": null,
   "builds": [
     { "src": "deploy/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*\\.(html|js|css|png|jpg|jpeg|svg|ico|json|webp|woff|woff2))", "dest": "/deploy/$1" },
-    { "src": "/sitemap.xml", "dest": "/deploy/sitemap.xml" },
-    { "src": "/robots.txt", "dest": "/deploy/robots.txt" },
-    { "src": "/manifest.json", "dest": "/deploy/manifest.json" },
-    { "src": "/service-worker.js", "dest": "/deploy/service-worker.js" },
     { "src": "/(.*)", "dest": "/deploy/$1" }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }
