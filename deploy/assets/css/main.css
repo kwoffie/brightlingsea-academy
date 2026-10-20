@@ -2715,9 +2715,8 @@ body:not(.dark-mode) .events-preview .event-card {
     .intro-headline {
         font-size: 1.5rem;
     }
-}
-
-/* ================================================================   ALL PAGES — FULL-PAGE FIXED BACKGROUND (merged scrolling details)
+}/* ================================================================
+   ALL PAGES — FULL-PAGE FIXED BACKGROUND (merged scrolling details)
    ----------------------------------------------------------------
    Every page sits on ONE viewport-fixed photo
    (assets/images/hero-class.jpg) with a brand scrim; bands, cards,
@@ -2774,14 +2773,29 @@ html body.home-page {
     background-color: #0A2540 !important;
 }
 
-/* --- Hero: drop its own scrolling photo copy so the fixed layer --- */
-/* --- shows through seamlessly (same image, no bottom-edge seam) --- */
+/* --- Page heroes: drop their own scrolling photo copies so the fixed --- */
+/* --- layer shows through seamlessly (same image, no hero seam). The    --- */
+/* --- scrim/pattern/content keep scrolling over it as before. Home-only --- */
+/* --- rule (.hero) stays; inner pages use .page-hero.                    --- */
 html body.home-page .hero-bg {
     background-color: transparent !important;
     background-image: none !important;
 }
 html body.home-page .hero-photo-slot {
     display: none !important;
+}
+html body .page-hero:not(.page-hero-anniversary) {
+    background: transparent !important;
+    background-image: linear-gradient(180deg, rgba(6, 20, 38, 0.30) 0%, rgba(6, 20, 38, 0.62) 100%) !important;
+}
+html body .page-hero-photo {
+    background-image: linear-gradient(135deg, rgba(0, 86, 163, 0.55) 0%, rgba(0, 48, 91, 0.68) 100%) !important;
+}
+html body .page-hero-anniversary {
+    background-image: linear-gradient(135deg, rgba(0, 86, 163, 0.62) 0%, rgba(0, 61, 122, 0.66) 55%, rgba(204, 85, 41, 0.55) 100%) !important;
+}
+html body .page-hero-anniversary::before {
+    opacity: 0.55;
 }
 
 /* --- Header: floating dark glass merged with the photo --- */
@@ -2851,6 +2865,103 @@ html body .newsletter-section {
 }
 /* PWA band keeps a light-end twin in light mode, navy in dark mode. */
 html body .pwa-footer-section {
+/* --- Inner-page content veils: translucent twins so the photo shows --- */
+/* --- through everywhere, tuned per original surface colour. White    --- */
+/* --- text bands go navy glass; dark-text light surfaces go light     --- */
+/* --- glass. Cards keep their own near-opaque rules above.            --- */
+html body .staff-content,
+html body .dept-content,
+html body .faq-content,
+html body .timeline-content,
+html body .video-gallery-content,
+html body .news-content,
+html body .resources-content,
+html body .alumni-content,
+html body .achievements-section,
+html body .contact-content,
+html body .gallery-content,
+html body .activities-content,
+html body .anniversary-content,
+html body .fac-section {
+    background: linear-gradient(180deg, rgba(10, 37, 64, 0.82) 0%, rgba(0, 86, 163, 0.76) 100%) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+html body .contact-form-section {
+    background: rgba(255, 255, 255, 0.92) !important;
+}
+html body .contact-info-section {
+    background: rgba(0, 86, 163, 0.88) !important;
+}
+html body .news-featured-section {
+    background: rgba(10, 37, 64, 0.86) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+html body .alumni-register-section,
+html body .alumni-spotlight-section {
+    background: rgba(10, 37, 64, 0.84) !important;
+    backdrop-filter: blur(8px);
+
+/* --- Popup menu glass: drawer + mega panel float on any page. --- */
+/* --- White text on dark glass; the panel keeps an orange top    --- */
+/* --- rule so it reads as part of the header bar.                --- */
+html body .nav-menu {
+    background: rgba(8, 20, 38, 0.92) !important;
+    backdrop-filter: blur(18px) saturate(1.2);
+    -webkit-backdrop-filter: blur(18px) saturate(1.2);
+    box-shadow: -4px 0 28px rgba(0, 0, 0, 0.45) !important;
+}
+html body .nav-menu .nav-link {
+    color: rgba(255, 255, 255, 0.94) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+html body .nav-menu .nav-link:hover,
+html body .nav-menu .nav-link.active {
+    color: #FFFFFF !important;
+}
+html body .nav-explore-heading {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+html body .nav-menu .nav-explore-group {
+    border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+html body .nav-menu .nav-explore-link {
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+html body .nav-menu .nav-explore-link:hover,
+html body .nav-menu .nav-explore-link.active {
+    color: #FFFFFF !important;
+    background: rgba(255, 107, 53, 0.22) !important;
+}
+@media (min-width: 993px) {
+    html body .nav-menu .nav-explore-grid {
+        background: rgba(8, 20, 38, 0.94) !important;
+        border-color: rgba(255, 255, 255, 0.14) !important;
+        border-top: 4px solid var(--orange) !important;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.5) !important;
+        backdrop-filter: blur(20px) saturate(1.2);
+        -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    }
+    html body .nav-mega-col-label {
+        color: #FF8C5A !important;
+    }
+    html body .nav-menu .nav-explore-link:hover,
+    html body .nav-menu .nav-explore-link.active {
+        background: rgba(255, 107, 53, 0.25) !important;
+    }
+}
+
+    -webkit-backdrop-filter: blur(8px);
+}
+/* Dark twins (light text on near-opaque dark surfaces). */
+html body.dark-mode .contact-form-section {
+    background: rgba(16, 49, 89, 0.94) !important;
+}
+html body.dark-mode .contact-info-section {
+    background: rgba(16, 49, 89, 0.90) !important;
+}
+
     background: linear-gradient(135deg, rgba(10, 37, 64, 0.88) 0%, rgba(230, 240, 250, 0.90) 100%) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
