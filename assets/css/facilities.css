@@ -3,7 +3,7 @@
    Scoped to .fac-wrap so nothing leaks into other pages.
    ========================================================================== */
 
-.fac-wrap { background: linear-gradient(180deg, var(--orange) 0%, #E85D2F 100%); }
+.fac-wrap { background: linear-gradient(180deg, rgba(0, 86, 163, 0.18) 0%, rgba(0, 48, 91, 0.25) 100%); }
 
 .fac-section { padding: 56px 0; }
 .fac-section.alt { background: rgba(255,255,255,0.08); }
