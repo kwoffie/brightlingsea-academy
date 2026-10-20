@@ -774,11 +774,7 @@ ul {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: var(--blue-dark);
-    background-image:
-        /* Base fallback only — the photo layer sits above this, with its own
-           light tint in .hero-overlay so the full picture stays visible. */
-        linear-gradient(135deg, rgba(0, 86, 163, 0.06) 0%, rgba(0, 61, 122, 0.04) 50%, rgba(0, 86, 163, 0.06) 100%);
+    background: transparent;
     z-index: 0;
 }
 
@@ -809,16 +805,13 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    /* Sits ABOVE the photo layer: brand-coloured warm glows over a light
-       full-photo tint, so the full background picture shows through this
-       wash instead of hiding behind a wall of blue. The top half stays
-       nearly clear for the crest; the bottom half carries the readability
-       scrim for the headline and buttons. The crest and copy sit at z-index
-       3, above this wash, so neither blocks the other. */
-    background:
-        linear-gradient(180deg, rgba(0, 61, 122, 0.06) 0%, rgba(0, 61, 122, 0.18) 42%, rgba(0, 40, 80, 0.66) 100%),
-        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 40%);
+    /* Sits ABOVE the photo layer, but lets the full picture show through.
+       The warm glows are now purely decorative — the background photo is
+       fully visible underneath. The top half stays nearly clear for the
+       crest; the bottom half carries the readability scrim for the headline
+       and buttons. The crest and copy sit at z-index 3, above this wash,
+       so neither blocks the other. */
+    background: transparent;
     z-index: 1;
 }
 
@@ -2715,7 +2708,9 @@ body:not(.dark-mode) .events-preview .event-card {
     .intro-headline {
         font-size: 1.5rem;
     }
-}/* ================================================================
+}
+
+/* ================================================================
    ALL PAGES — FULL-PAGE FIXED BACKGROUND (merged scrolling details)
    ----------------------------------------------------------------
    Every page sits on ONE viewport-fixed photo
@@ -3072,5 +3067,4 @@ html body.dark-mode .becs-showcase-card {
         -webkit-backdrop-filter: none !important;
     }
 }
-
 
