@@ -2,7 +2,7 @@
  * BRIGHTLINGSEA ACADEMY — SERVICE WORKER
  * Provides offline caching for core pages and assets
  */
-const CACHE_NAME = 'brightlingsea-v15';
+const CACHE_NAME = 'brightlingsea-v16';
 
 /**
  * Resolve every cache URL relative to wherever this worker is deployed.
