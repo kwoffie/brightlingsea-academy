@@ -2800,10 +2800,10 @@ html body .page-hero-anniversary::before {
 /*  scrim with light text. This also fixes the current dark-mode gap  */
 /*  where light nav text sat on the white bar.)                        */
 html body .site-header {
-    background: linear-gradient(180deg, rgba(6, 18, 34, 0.72) 0%, rgba(6, 18, 34, 0.52) 100%) !important;
-    backdrop-filter: blur(14px) saturate(1.15);
-    -webkit-backdrop-filter: blur(14px) saturate(1.15);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.14), 0 8px 28px rgba(4, 12, 24, 0.28) !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
     border: none;
 }
 html body .brand-name {
@@ -2862,6 +2862,11 @@ html body .newsletter-section {
 }
 /* PWA band keeps a light-end twin in light mode, navy in dark mode. */
 html body .pwa-footer-section {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
 /* --- Inner-page content veils: translucent twins so the photo shows --- */
 /* --- through everywhere, tuned per original surface colour. White    --- */
 /* --- text bands go navy glass; dark-text light surfaces go light     --- */
@@ -2964,7 +2969,7 @@ html body.dark-mode .contact-info-section {
     -webkit-backdrop-filter: blur(8px);
 }
 html body.dark-mode .pwa-footer-section {
-    background: linear-gradient(135deg, rgba(13, 27, 42, 0.88) 0%, rgba(27, 38, 59, 0.88) 100%) !important;
+    background: transparent !important;
 }
 
 /* --- Footer: translucent deep navy (white text stays AA-safe) --- */

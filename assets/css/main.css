@@ -2864,6 +2864,11 @@ html body .newsletter-section {
 }
 /* PWA band keeps a light-end twin in light mode, navy in dark mode. */
 html body .pwa-footer-section {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
 /* --- Inner-page content veils: translucent twins so the photo shows --- */
 /* --- through everywhere, tuned per original surface colour. White    --- */
 /* --- text bands go navy glass; dark-text light surfaces go light     --- */
@@ -2966,7 +2971,7 @@ html body.dark-mode .contact-info-section {
     -webkit-backdrop-filter: blur(8px);
 }
 html body.dark-mode .pwa-footer-section {
-    background: linear-gradient(135deg, rgba(13, 27, 42, 0.88) 0%, rgba(27, 38, 59, 0.88) 100%) !important;
+    background: transparent !important;
 }
 
 /* --- Footer: translucent deep navy (white text stays AA-safe) --- */
